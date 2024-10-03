@@ -12,11 +12,13 @@ namespace CadBroasteria
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class LabBroasteriaEntities : DbContext
+    public partial class LabBroasteriaEntities1 : DbContext
     {
-        public LabBroasteriaEntities()
-            : base("name=LabBroasteriaEntities")
+        public LabBroasteriaEntities1()
+            : base("name=LabBroasteriaEntities1")
         {
         }
     
@@ -34,5 +36,14 @@ namespace CadBroasteria
         public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Venta> Ventas { get; set; }
         public virtual DbSet<VentaDetalle> VentaDetalles { get; set; }
+    
+        public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoListar_Result>("paProductoListar", parametroParameter);
+        }
     }
 }

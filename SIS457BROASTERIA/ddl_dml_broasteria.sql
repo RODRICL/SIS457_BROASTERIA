@@ -104,11 +104,13 @@ ALTER TABLE Producto ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME
 ALTER TABLE Producto ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Producto ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
+
+
 GO
-ALTER PROC paProductoListar @parametro VARCHAR(100)
+CREATE PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Producto
-  WHERE estado<>-1 AND descripcion LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+  WHERE estado<>-1 
   ORDER BY descripcion;
 
 INSERT INTO Producto(codigo, descripcion, stock, precioVenta)
@@ -121,3 +123,4 @@ INSERT INTO Producto(codigo, descripcion, stock, precioVenta)
 VALUES ('HA', 'Hamburguesa', 12, 8);
 
 SELECT * FROM Producto
+
