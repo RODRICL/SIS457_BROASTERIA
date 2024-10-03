@@ -15,10 +15,10 @@ namespace CadBroasteria
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class LabBroasteriaEntities1 : DbContext
+    public partial class LabBroasteriaEntities : DbContext
     {
-        public LabBroasteriaEntities1()
-            : base("name=LabBroasteriaEntities1")
+        public LabBroasteriaEntities()
+            : base("name=LabBroasteriaEntities")
         {
         }
     
@@ -27,15 +27,15 @@ namespace CadBroasteria
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Cliente> Clientes { get; set; }
-        public virtual DbSet<Compra> Compras { get; set; }
-        public virtual DbSet<CompraDetalle> CompraDetalles { get; set; }
-        public virtual DbSet<Empleado> Empleadoes { get; set; }
-        public virtual DbSet<Producto> Productoes { get; set; }
-        public virtual DbSet<Proveedor> Proveedors { get; set; }
-        public virtual DbSet<Usuario> Usuarios { get; set; }
-        public virtual DbSet<Venta> Ventas { get; set; }
-        public virtual DbSet<VentaDetalle> VentaDetalles { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Compra> Compra { get; set; }
+        public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
+        public virtual DbSet<Empleado> Empleado { get; set; }
+        public virtual DbSet<Producto> Producto { get; set; }
+        public virtual DbSet<Proveedor> Proveedor { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Venta> Venta { get; set; }
+        public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
     
         public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
         {
