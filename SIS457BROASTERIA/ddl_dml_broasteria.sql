@@ -107,10 +107,10 @@ ALTER TABLE Producto ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0
 
 
 GO
-CREATE PROC paProductoListar @parametro VARCHAR(100)
+ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Producto
-  WHERE estado<>-1 
+  WHERE estado<>-1 AND descripcion LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY descripcion;
 
 INSERT INTO Producto(codigo, descripcion, stock, precioVenta)

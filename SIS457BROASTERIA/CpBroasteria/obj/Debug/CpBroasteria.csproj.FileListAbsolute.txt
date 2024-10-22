@@ -18,3 +18,4 @@ C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA
 C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\obj\Debug\CpBroast.6F187D31.Up2Date
 C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\obj\Debug\CpBroasteria.exe
 C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\obj\Debug\CpBroasteria.pdb
+C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\obj\Debug\CpBroasteria.FrmProducto.resources
