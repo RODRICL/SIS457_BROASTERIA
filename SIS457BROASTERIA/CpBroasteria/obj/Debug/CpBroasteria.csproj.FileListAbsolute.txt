@@ -32,3 +32,6 @@ C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA
 C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\bin\Debug\C1.Win.C1Input.2.xml
 C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\bin\Debug\C1.Win.C1Input.4.5.2.xml
 C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\obj\Debug\CpBroasteria.exe.licenses
+C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\obj\Debug\CpBroasteria.FrmPrincipal.resources
+C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\bin\Debug\C1.Win.Ribbon.4.5.2.dll
+C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\CpBroasteria\bin\Debug\C1.Win.Ribbon.4.5.2.xml
