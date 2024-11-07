@@ -12,16 +12,17 @@ namespace CadBroasteria
     using System;
     using System.Collections.Generic;
     
-    public partial class CompraDetalle
+    public partial class HistorialCompra
     {
         public int id { get; set; }
-        public int idCompra { get; set; }
         public int idProducto { get; set; }
-        public decimal cantidad { get; set; }
-        public decimal precioUnitario { get; set; }
-        public decimal total { get; set; }
+        public decimal precioCompra { get; set; }
+        public decimal precioVenta { get; set; }
+        public int cantidad { get; set; }
+        public string usuarioRegistro { get; set; }
+        public System.DateTime fechaRegistro { get; set; }
+        public short estado { get; set; }
     
-        public virtual Compra Compra { get; set; }
         public virtual Producto Producto { get; set; }
     }
 }

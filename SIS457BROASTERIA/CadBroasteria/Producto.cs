@@ -17,19 +17,31 @@ namespace CadBroasteria
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Producto()
         {
-            this.CompraDetalles = new HashSet<CompraDetalle>();
+            this.DetalleCompra = new HashSet<DetalleCompra>();
+            this.DetalleVenta = new HashSet<DetalleVenta>();
+            this.HistorialCompra = new HashSet<HistorialCompra>();
+            this.HistorialVenta = new HashSet<HistorialVenta>();
         }
     
         public int id { get; set; }
+        public int idCategoria { get; set; }
         public string codigo { get; set; }
+        public string nombre { get; set; }
         public string descripcion { get; set; }
         public int stock { get; set; }
-        public decimal precioVenta { get; set; }
+        public Nullable<decimal> precioVenta { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
     
+        public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompraDetalle> CompraDetalles { get; set; }
+        public virtual ICollection<DetalleCompra> DetalleCompra { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistorialCompra> HistorialCompra { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistorialVenta> HistorialVenta { get; set; }
     }
 }

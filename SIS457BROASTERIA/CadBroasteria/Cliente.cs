@@ -15,11 +15,12 @@ namespace CadBroasteria
     public partial class Cliente
     {
         public int id { get; set; }
-        public string cedulaIdentidad { get; set; }
-        public string nombres { get; set; }
-        public string primerApellido { get; set; }
-        public string segundoApellido { get; set; }
-        public string direccion { get; set; }
-        public long celular { get; set; }
+        public string documento { get; set; }
+        public string nombreCompleto { get; set; }
+        public string email { get; set; }
+        public string telefono { get; set; }
+        public string usuarioRegistro { get; set; }
+        public System.DateTime fechaRegistro { get; set; }
+        public short estado { get; set; }
     }
 }

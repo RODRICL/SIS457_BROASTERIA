@@ -17,17 +17,22 @@ namespace CadBroasteria
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Compra()
         {
-            this.CompraDetalles = new HashSet<CompraDetalle>();
+            this.DetalleCompra = new HashSet<DetalleCompra>();
         }
     
         public int id { get; set; }
+        public int idUsuario { get; set; }
         public int idProveedor { get; set; }
-        public int transaccion { get; set; }
-        public decimal total { get; set; }
-        public System.DateTime fecha { get; set; }
+        public string tipoDocumento { get; set; }
+        public string numeroDocumento { get; set; }
+        public decimal montoTotal { get; set; }
+        public string usuarioRegistro { get; set; }
+        public System.DateTime fechaRegistro { get; set; }
+        public short estado { get; set; }
     
         public virtual Proveedor Proveedor { get; set; }
+        public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CompraDetalle> CompraDetalles { get; set; }
+        public virtual ICollection<DetalleCompra> DetalleCompra { get; set; }
     }
 }

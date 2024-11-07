@@ -11,15 +11,13 @@ namespace CadBroasteria
 {
     using System;
     
-    public partial class paProductoListar_Result
+    public partial class paClienteListar_Result
     {
         public int id { get; set; }
-        public int idCategoria { get; set; }
-        public string codigo { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public int stock { get; set; }
-        public Nullable<decimal> precioVenta { get; set; }
+        public string documento { get; set; }
+        public string nombreCompleto { get; set; }
+        public string email { get; set; }
+        public string telefono { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }

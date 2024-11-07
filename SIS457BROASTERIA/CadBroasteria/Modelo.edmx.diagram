@@ -4,22 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fa843c7722e84ae6b1614d8485bc2b3b" Name="Diagram1">
-        <EntityTypeShape EntityType="LabBroasteriaModel.Cliente" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Compra" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.CompraDetalle" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Empleado" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Producto" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Proveedor" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Usuario" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Venta" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.VentaDetalle" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="af24253aa70340eab2b263baf9a6b14d" Name="Diagram1">
+        <EntityTypeShape EntityType="LabBroasteriaModel.Categoria" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Cliente" Width="1.5" PointX="8.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Compra" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.DetalleCompra" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.DetalleVenta" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Empleado" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.HistorialCompra" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.HistorialVenta" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Producto" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Proveedor" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Usuario" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Venta" Width="1.5" PointX="6" PointY="2.5" IsExpanded="true" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Compra_Proveedor" ManuallyRouted="false" />
-        <AssociationConnector Association="LabBroasteriaModel.fk_CompreDetalle" ManuallyRouted="false" />
-        <AssociationConnector Association="LabBroasteriaModel.fk_CompraDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_Compra_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_DetalleCompra_Compra" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_DetalleCompra_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_DetalleVenta_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_DetalleVenta_Venta" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Usuario_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_HistorialCompra_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="LabBroasteriaModel.fk_HistorialVenta_Producto" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Venta_Usuario" ManuallyRouted="false" />
-        <AssociationConnector Association="LabBroasteriaModel.fk_VentaDetalle_Venta" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

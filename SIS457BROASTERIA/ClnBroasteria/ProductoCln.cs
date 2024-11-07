@@ -25,6 +25,7 @@ namespace ClnBroasteria
             {
                 var existente = context.Producto.Find(producto.id);
                 existente.codigo = producto.codigo;
+                existente.nombre = producto.nombre;
                 existente.descripcion = producto.descripcion;  
                 existente.stock = producto.stock;
                 existente.precioVenta = producto.precioVenta;
