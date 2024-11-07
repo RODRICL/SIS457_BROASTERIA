@@ -267,4 +267,13 @@ GO
 EXEC paClienteListar 'garza';
 GO
 
+--DATOS EMPLEADO
+INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
+VALUES('7246542','Sebastian ','Gironda', 'Carrasco', 'Eduardo Berdecio', 71451412, 'cajero');
+
+--DATOS USUARIO
+INSERT INTO Usuario(idEmpleado, usuario, clave)
+VALUES(1, 'gironda', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
+
 

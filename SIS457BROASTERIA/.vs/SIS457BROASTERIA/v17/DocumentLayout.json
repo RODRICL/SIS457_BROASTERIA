@@ -3,11 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11A35BEF-D83B-4D27-BDB5-1FE1B665545A}|ClnBroasteria\\ClnBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\clnbroasteria\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11A35BEF-D83B-4D27-BDB5-1FE1B665545A}|ClnBroasteria\\ClnBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\clnbroasteria\\usuariocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11A35BEF-D83B-4D27-BDB5-1FE1B665545A}|ClnBroasteria\\ClnBroasteria.csproj|solutionrelative:clnbroasteria\\usuariocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\ddl_dml_broasteria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ddl_dml_broasteria.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11A35BEF-D83B-4D27-BDB5-1FE1B665545A}|ClnBroasteria\\ClnBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\clnbroasteria\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11A35BEF-D83B-4D27-BDB5-1FE1B665545A}|ClnBroasteria\\ClnBroasteria.csproj|solutionrelative:clnbroasteria\\productocln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\cadbroasteria\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cadbroasteria\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|solutionrelative:cadbroasteria\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +70,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioCln.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\ClnBroasteria\\UsuarioCln.cs",
+              "RelativeDocumentMoniker": "ClnBroasteria\\UsuarioCln.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\ClnBroasteria\\UsuarioCln.cs",
+              "RelativeToolTip": "ClnBroasteria\\UsuarioCln.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T19:35:03.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Util.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\Util.cs",
+              "RelativeDocumentMoniker": "CpBroasteria\\Util.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\Util.cs",
+              "RelativeToolTip": "CpBroasteria\\Util.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T19:29:21.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ddl_dml_broasteria.sql ",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\ddl_dml_broasteria.sql",
+              "RelativeDocumentMoniker": "ddl_dml_broasteria.sql",
+              "ToolTip": "ddl_dml_broasteria.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-07T19:13:34.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\Program.cs",
+              "RelativeDocumentMoniker": "CpBroasteria\\Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\Program.cs",
+              "RelativeToolTip": "CpBroasteria\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T19:06:35.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmAutenticacion.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs",
+              "RelativeDocumentMoniker": "CpBroasteria\\FrmAutenticacion.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs",
+              "RelativeToolTip": "CpBroasteria\\FrmAutenticacion.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwDAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:59:32.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FrmAutenticacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs",
+              "RelativeDocumentMoniker": "CpBroasteria\\FrmAutenticacion.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpBroasteria\\FrmAutenticacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T18:55:48.273Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ProductoCln.cs",
               "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\ClnBroasteria\\ProductoCln.cs",
               "RelativeDocumentMoniker": "ClnBroasteria\\ProductoCln.cs",
@@ -54,12 +149,11 @@
               "RelativeToolTip": "ClnBroasteria\\ProductoCln.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T18:23:23.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T18:23:23.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "App.Config",
               "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CadBroasteria\\App.Config",
               "RelativeDocumentMoniker": "CadBroasteria\\App.Config",
@@ -67,8 +161,7 @@
               "RelativeToolTip": "CadBroasteria\\App.Config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-07T18:11:27.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T18:11:27.065Z"
             }
           ]
         }
