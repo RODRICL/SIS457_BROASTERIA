@@ -275,5 +275,32 @@ VALUES('7246542','Sebastian ','Gironda', 'Carrasco', 'Eduardo Berdecio', 7145141
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES(1, 'gironda', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
+GO
+
+CREATE PROC paProductooListar @parametro VARCHAR(100)
+  AS BEGIN 
+  SET NOCOUNT ON;
+  SELECT
+        pr.id ,
+        pr.codigo,
+        pr.nombre,
+        c.descripcion AS Categoria,
+        pr.descripcion AS Descripcion,
+        pr.stock,
+        pr.precioVenta,
+        pr.usuarioRegistro,
+        pr.fechaRegistro,
+        pr.estado
+      
+  FROM Producto pr JOIN Categoria c ON pr.idCategoria = c.id
+  WHERE
+  pr.estado <> -1 AND (
+         pr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' OR
+         pr.codigo LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' OR
+         c.descripcion LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' 
+   )
+END
+
+select * from producto
 
 

@@ -65,5 +65,12 @@ namespace ClnBroasteria
                 return context.paProductoListar(parametro).ToList();
             }
         }
+        public static bool ExisteCodigo(string codigo)
+        {
+            using (var context = new LabBroasteriaEntities())
+            {
+                return context.Producto.Any(p => p.codigo == codigo && p.estado != -1);
+            }
+        }
     }
 }

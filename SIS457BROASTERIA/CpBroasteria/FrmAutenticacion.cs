@@ -54,7 +54,7 @@ namespace CpBroasteria
                     txtUsuario.Focus();
                     txtUsuario.SelectAll();
                     Visible = false;
-                    new FrmPrincipal().ShowDialog();
+                    new FrmPrincipal(this).ShowDialog();
                 }
                 else MessageBox.Show("Usuario y/o contraseña incorrecto", "::: Minerva - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);

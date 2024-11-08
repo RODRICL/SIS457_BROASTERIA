@@ -12,28 +12,26 @@ namespace CpBroasteria
 {
     public partial class FrmPrincipal : Form
     {
-        private static Form formularioActual = null;
-        public FrmPrincipal()
+        private FrmAutenticacion frmAutenticacion;
+        public FrmPrincipal(FrmAutenticacion frmAutenticacion)
         {
             InitializeComponent();
+            this.frmAutenticacion = frmAutenticacion;
         }
 
         private void btnCaProductos_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new FrmProducto());
+            new FrmProducto().ShowDialog();
         }
-        private void abrirFormulario(Form formulario)
+
+        private void btnCaCategoria_Click(object sender, EventArgs e)
         {
-            if (formularioActual != null)
-            {
-                formularioActual.Close();
-            }
-            formularioActual = formulario;
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None;
-            formulario.Dock = DockStyle.Fill;
-            pnlContenedor.Controls.Add(formulario);
-            formulario.Show();
+            new FrmCategoria().ShowDialog();
+        }
+
+        private void btnCaProveedor_Click(object sender, EventArgs e)
+        {
+            new FrmCliente().ShowDialog();
         }
     }
 }
