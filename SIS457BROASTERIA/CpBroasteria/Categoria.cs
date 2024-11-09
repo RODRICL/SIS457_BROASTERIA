@@ -27,7 +27,6 @@ namespace CpBroasteria
             dgvListaCategoria.DataSource = lista;
             dgvListaCategoria.Columns["id"].Visible = false;
             dgvListaCategoria.Columns["estado"].Visible = false;
-            //esto es para cambiar los nombres visibles en la tabla
             dgvListaCategoria.Columns["descripcion"].HeaderText = "Descripción";
 
 
@@ -60,8 +59,7 @@ namespace CpBroasteria
         {
             bool esValido = true;
             erpDescripcionCategoria.SetError(txtDescripcionCategoria, "");
-
-            // evalua si la cadena esta vacia en el espacio de documento, visebersa para todos los campos 
+ 
             if (string.IsNullOrEmpty(txtDescripcionCategoria.Text))
             {
                 esValido = false;

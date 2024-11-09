@@ -67,7 +67,7 @@
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(800, 161);
+            this.c1Ribbon1.Size = new System.Drawing.Size(803, 161);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab3);
@@ -215,7 +215,7 @@
             this.pctPrincipal.Image = global::CpBroasteria.Properties.Resources.fondoo1;
             this.pctPrincipal.Location = new System.Drawing.Point(0, 161);
             this.pctPrincipal.Name = "pctPrincipal";
-            this.pctPrincipal.Size = new System.Drawing.Size(800, 289);
+            this.pctPrincipal.Size = new System.Drawing.Size(803, 289);
             this.pctPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctPrincipal.TabIndex = 1;
             this.pctPrincipal.TabStop = false;
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(803, 450);
             this.Controls.Add(this.pctPrincipal);
             this.Controls.Add(this.c1Ribbon1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

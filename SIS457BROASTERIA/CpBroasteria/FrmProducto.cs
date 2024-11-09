@@ -57,6 +57,9 @@ namespace CpBroasteria
             txtCodigo.Enabled = false;
             txtNombre.Enabled = false;
             txtDescripcion.Enabled = false;
+            txtprecioVenta.Enabled = false;
+            nudStock.Enabled = false;
+            cbxCategoria.Enabled = false;
 
         }
         private bool validar()
@@ -65,8 +68,10 @@ namespace CpBroasteria
             erpCodigo.SetError(txtCodigo, "");
             erpNombre.SetError(txtNombre, "");
             erpDescripcion.SetError(txtDescripcion, "");
+            erpPrecioVenta.SetError(txtprecioVenta, "");
+            erpStock.SetError(nudStock, "");
 
- 
+
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 esValido = false;
@@ -90,6 +95,18 @@ namespace CpBroasteria
             txtCodigo.Enabled = true;
             txtNombre.Enabled = true;
             txtDescripcion.Enabled = true;
+            txtprecioVenta.Enabled = true;
+            nudStock.Enabled = true;
+            cbxCategoria.Enabled = true;
+
+        }
+        private void limpiar()
+        {
+            txtCodigo.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            txtprecioVenta.Text = string.Empty;
+            nudStock.Text = string.Empty; 
 
         }
 
@@ -101,8 +118,8 @@ namespace CpBroasteria
                 producto.codigo = txtCodigo.Text.Trim();
                 producto.nombre = txtNombre.Text.Trim();
                 producto.descripcion = txtDescripcion.Text.Trim();
-                producto.precioVenta = 0;
-                producto.stock = 0;
+                producto.precioVenta = decimal.Parse(txtprecioVenta.Text);
+                producto.stock = int.Parse(nudStock.Text);
                 producto.idCategoria = (int)cbxCategoria.SelectedValue; 
                 producto.usuarioRegistro = Util.usuario.usuario1;
 
@@ -141,6 +158,7 @@ namespace CpBroasteria
                 MessageBox.Show("Producto guardado correctamente", ":::Broasteria - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiar();
             DesactivarCampos();
         }
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -182,6 +200,8 @@ namespace CpBroasteria
             txtCodigo.Text = producto.codigo;
             txtNombre.Text = producto.nombre;
             txtDescripcion.Text = producto.descripcion;
+            txtprecioVenta.Text = producto.precioVenta.ToString();
+            nudStock.Text = producto.stock.ToString();
 
             HabilitarCampos();
 

@@ -25,7 +25,6 @@ namespace CpBroasteria
             dgvListaCliente.DataSource = lista;
             dgvListaCliente.Columns["id"].Visible = false;
             dgvListaCliente.Columns["estado"].Visible = false;
-            //esto es para cambiar los nombres visibles en la tabla
             dgvListaCliente.Columns["nombreCompleto"].HeaderText = "Nombre Completo";
             dgvListaCliente.Columns["documento"].HeaderText = "N° Documento";
             dgvListaCliente.Columns["email"].HeaderText = "Correo";
