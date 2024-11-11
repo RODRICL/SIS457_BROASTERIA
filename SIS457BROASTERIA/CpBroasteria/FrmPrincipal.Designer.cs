@@ -61,13 +61,13 @@
             // c1Ribbon1
             // 
             this.c1Ribbon1.ApplicationMenuHolder = this.ribbonApplicationMenu1;
-            this.c1Ribbon1.AutoSizeElement = C1.Framework.AutoSizeElement.Width;
             this.c1Ribbon1.BottomToolBarHolder = this.ribbonBottomToolBar1;
             this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.c1Ribbon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.c1Ribbon1.Name = "c1Ribbon1";
             this.c1Ribbon1.QatHolder = this.ribbonQat1;
-            this.c1Ribbon1.Size = new System.Drawing.Size(803, 161);
+            this.c1Ribbon1.Size = new System.Drawing.Size(1071, 201);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab1);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab2);
             this.c1Ribbon1.Tabs.Add(this.ribbonTab3);
@@ -166,7 +166,6 @@
             // 
             this.ribbonGroup5.Items.Add(this.btnCaVenta);
             this.ribbonGroup5.Name = "ribbonGroup5";
-            this.ribbonGroup5.Text = "Group";
             // 
             // btnCaVenta
             // 
@@ -174,6 +173,7 @@
             this.btnCaVenta.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(128, 128), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnCaVenta.IconSet")))));
             this.btnCaVenta.Name = "btnCaVenta";
             this.btnCaVenta.Text = "Venta";
+            this.btnCaVenta.Click += new System.EventHandler(this.btnCaVenta_Click);
             // 
             // ribbonTab4
             // 
@@ -213,21 +213,23 @@
             // 
             this.pctPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctPrincipal.Image = global::CpBroasteria.Properties.Resources.fondoo1;
-            this.pctPrincipal.Location = new System.Drawing.Point(0, 161);
+            this.pctPrincipal.Location = new System.Drawing.Point(0, 201);
+            this.pctPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pctPrincipal.Name = "pctPrincipal";
-            this.pctPrincipal.Size = new System.Drawing.Size(803, 289);
+            this.pctPrincipal.Size = new System.Drawing.Size(1071, 353);
             this.pctPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctPrincipal.TabIndex = 1;
             this.pctPrincipal.TabStop = false;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 450);
+            this.ClientSize = new System.Drawing.Size(1071, 554);
             this.Controls.Add(this.pctPrincipal);
             this.Controls.Add(this.c1Ribbon1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
