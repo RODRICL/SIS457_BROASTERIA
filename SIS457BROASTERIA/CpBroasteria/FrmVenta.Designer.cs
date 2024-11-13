@@ -38,24 +38,19 @@
             this.gbxInformacionCliente = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.txtCedulaIdentidad = new System.Windows.Forms.TextBox();
+            this.txtdocumento = new System.Windows.Forms.TextBox();
             this.lblCedulaIdentidad = new System.Windows.Forms.Label();
             this.gbxInformacionProducto = new System.Windows.Forms.GroupBox();
             this.txtStock = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblProducto = new System.Windows.Forms.Label();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.lblCodigoProducto = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.lblPagoCon = new System.Windows.Forms.Label();
@@ -63,6 +58,12 @@
             this.txtMontoAPagar = new System.Windows.Forms.TextBox();
             this.txtPagaCon = new System.Windows.Forms.TextBox();
             this.txtCambio = new System.Windows.Forms.TextBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarProducto = new System.Windows.Forms.Button();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.gbxInformacionVenta.SuspendLayout();
             this.gbxInformacionCliente.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
@@ -163,10 +164,11 @@
             // 
             this.gbxInformacionCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbxInformacionCliente.BackColor = System.Drawing.Color.White;
+            this.gbxInformacionCliente.Controls.Add(this.btnAgregarCliente);
             this.gbxInformacionCliente.Controls.Add(this.txtNombre);
             this.gbxInformacionCliente.Controls.Add(this.lblNombre);
             this.gbxInformacionCliente.Controls.Add(this.btnBuscarCliente);
-            this.gbxInformacionCliente.Controls.Add(this.txtCedulaIdentidad);
+            this.gbxInformacionCliente.Controls.Add(this.txtdocumento);
             this.gbxInformacionCliente.Controls.Add(this.lblCedulaIdentidad);
             this.gbxInformacionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxInformacionCliente.Location = new System.Drawing.Point(418, 103);
@@ -182,10 +184,10 @@
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(253, 49);
+            this.txtNombre.Location = new System.Drawing.Point(303, 49);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(234, 29);
+            this.txtNombre.Size = new System.Drawing.Size(184, 29);
             this.txtNombre.TabIndex = 20;
             // 
             // lblNombre
@@ -194,35 +196,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(263, 24);
+            this.lblNombre.Location = new System.Drawing.Point(344, 23);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(73, 18);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Nombre:";
             // 
-            // btnBuscarCliente
+            // txtdocumento
             // 
-            this.btnBuscarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtdocumento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarCliente.Location = new System.Drawing.Point(192, 40);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnBuscarCliente.Size = new System.Drawing.Size(46, 41);
-            this.btnBuscarCliente.TabIndex = 18;
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            // 
-            // txtCedulaIdentidad
-            // 
-            this.txtCedulaIdentidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCedulaIdentidad.Location = new System.Drawing.Point(4, 49);
-            this.txtCedulaIdentidad.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCedulaIdentidad.Name = "txtCedulaIdentidad";
-            this.txtCedulaIdentidad.Size = new System.Drawing.Size(173, 29);
-            this.txtCedulaIdentidad.TabIndex = 2;
+            this.txtdocumento.Location = new System.Drawing.Point(4, 49);
+            this.txtdocumento.Margin = new System.Windows.Forms.Padding(2);
+            this.txtdocumento.Name = "txtdocumento";
+            this.txtdocumento.Size = new System.Drawing.Size(126, 29);
+            this.txtdocumento.TabIndex = 2;
             // 
             // lblCedulaIdentidad
             // 
@@ -242,7 +231,7 @@
             this.gbxInformacionProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbxInformacionProducto.BackColor = System.Drawing.Color.White;
             this.gbxInformacionProducto.Controls.Add(this.txtStock);
-            this.gbxInformacionProducto.Controls.Add(this.txtPrecio);
+            this.gbxInformacionProducto.Controls.Add(this.txtPrecioVenta);
             this.gbxInformacionProducto.Controls.Add(this.lblStock);
             this.gbxInformacionProducto.Controls.Add(this.lblPrecio);
             this.gbxInformacionProducto.Controls.Add(this.nudCantidad);
@@ -272,15 +261,15 @@
             this.txtStock.Size = new System.Drawing.Size(78, 29);
             this.txtStock.TabIndex = 30;
             // 
-            // txtPrecio
+            // txtPrecioVenta
             // 
-            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(466, 72);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(94, 29);
-            this.txtPrecio.TabIndex = 29;
+            this.txtPrecioVenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtPrecioVenta.Enabled = false;
+            this.txtPrecioVenta.Location = new System.Drawing.Point(466, 72);
+            this.txtPrecioVenta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(94, 29);
+            this.txtPrecioVenta.TabIndex = 29;
             // 
             // lblStock
             // 
@@ -364,18 +353,6 @@
             this.lblProducto.TabIndex = 19;
             this.lblProducto.Text = "Producto:";
             // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBuscarProducto.Image = global::CpBroasteria.Properties.Resources.search;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(149, 59);
-            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnBuscarProducto.Size = new System.Drawing.Size(48, 42);
-            this.btnBuscarProducto.TabIndex = 18;
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            // 
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -397,51 +374,6 @@
             this.lblCodigoProducto.Size = new System.Drawing.Size(141, 18);
             this.lblCodigoProducto.TabIndex = 1;
             this.lblCodigoProducto.Text = "Código Producto:";
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::CpBroasteria.Properties.Resources.venta;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(810, 546);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 67);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Registrar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::CpBroasteria.Properties.Resources.quitar_2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(803, 302);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 62);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Quitar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProducto.Image = global::CpBroasteria.Properties.Resources.carrito_agregar;
-            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(803, 190);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(109, 107);
-            this.btnAgregarProducto.TabIndex = 33;
-            this.btnAgregarProducto.Text = "Agregar";
-            this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregarProducto.UseVisualStyleBackColor = true;
             // 
             // dgvVentas
             // 
@@ -516,6 +448,94 @@
             this.txtCambio.Size = new System.Drawing.Size(119, 20);
             this.txtCambio.TabIndex = 48;
             // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarCliente.Location = new System.Drawing.Point(154, 44);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnBuscarCliente.Size = new System.Drawing.Size(46, 41);
+            this.btnBuscarCliente.TabIndex = 18;
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // btnAgregarCliente
+            // 
+            this.btnAgregarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.Location = new System.Drawing.Point(204, 40);
+            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAgregarCliente.Size = new System.Drawing.Size(82, 41);
+            this.btnAgregarCliente.TabIndex = 49;
+            this.btnAgregarCliente.Text = "Crear Cliente";
+            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::CpBroasteria.Properties.Resources.venta;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(810, 546);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 67);
+            this.button2.TabIndex = 41;
+            this.button2.Text = "Registrar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::CpBroasteria.Properties.Resources.quitar_2;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(803, 302);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 62);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Quitar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProducto.Image = global::CpBroasteria.Properties.Resources.carrito_agregar;
+            this.btnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(803, 190);
+            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(109, 107);
+            this.btnAgregarProducto.TabIndex = 33;
+            this.btnAgregarProducto.Text = "Agregar";
+            this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnBuscarProducto.Image = global::CpBroasteria.Properties.Resources.search;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(149, 59);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnBuscarProducto.Size = new System.Drawing.Size(48, 42);
+            this.btnBuscarProducto.TabIndex = 18;
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,12 +585,11 @@
         private System.Windows.Forms.GroupBox gbxInformacionCliente;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.TextBox txtCedulaIdentidad;
+        private System.Windows.Forms.TextBox txtdocumento;
         private System.Windows.Forms.Label lblCedulaIdentidad;
         private System.Windows.Forms.GroupBox gbxInformacionProducto;
         private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtPrecioVenta;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.NumericUpDown nudCantidad;
@@ -590,5 +609,7 @@
         private System.Windows.Forms.TextBox txtMontoAPagar;
         private System.Windows.Forms.TextBox txtPagaCon;
         private System.Windows.Forms.TextBox txtCambio;
+        private System.Windows.Forms.Button btnBuscarCliente;
+        private System.Windows.Forms.Button btnAgregarCliente;
     }
 }

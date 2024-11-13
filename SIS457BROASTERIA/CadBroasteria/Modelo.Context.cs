@@ -58,6 +58,24 @@ namespace CadBroasteria
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paClienteListar_Result>("paClienteListar", parametroParameter);
         }
     
+        public virtual ObjectResult<paListarCliente_Result> paListarCliente(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paListarCliente_Result>("paListarCliente", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paListarProducto_Result> paListarProducto(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paListarProducto_Result>("paListarProducto", parametroParameter);
+        }
+    
         public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
         {
             var parametroParameter = parametro != null ?

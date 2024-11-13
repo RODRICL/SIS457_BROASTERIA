@@ -381,6 +381,12 @@
     <FunctionImport Name="paClienteListar" ReturnType="Collection(LabBroasteriaModel.paClienteListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="paListarCliente" ReturnType="Collection(LabBroasteriaModel.paListarCliente_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paListarProducto" ReturnType="Collection(LabBroasteriaModel.paListarProducto_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="paProductoListar" ReturnType="Collection(LabBroasteriaModel.paProductoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
@@ -404,6 +410,18 @@
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paListarCliente_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="documento" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paListarProducto_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="stock" Nullable="false" />
+    <Property Type="Decimal" Name="precioVenta" Nullable="true" Precision="10" Scale="2" />
   </ComplexType>
   <ComplexType Name="paProductoListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />

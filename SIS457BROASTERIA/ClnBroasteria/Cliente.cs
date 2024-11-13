@@ -75,6 +75,13 @@ namespace ClnBroasteria
                 return context.Cliente.Any(c => c.documento == documento && c.estado != -1);
             }
         }
+        public static List<paListarCliente_Result> listarCli(string parametro)
+        {
+            using (var context = new LabBroasteriaEntities())
+            {
+                return context.paListarCliente(parametro).ToList();
+            }
+        }
 
     }
 }

@@ -307,6 +307,12 @@
         <Function Name="paClienteListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="paListarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="parametro" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paListarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="parametro" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="paProductoListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
@@ -757,6 +763,12 @@
           <FunctionImport Name="paClienteListar" ReturnType="Collection(LabBroasteriaModel.paClienteListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="paListarCliente" ReturnType="Collection(LabBroasteriaModel.paListarCliente_Result)">
+            <Parameter Name="parametro" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paListarProducto" ReturnType="Collection(LabBroasteriaModel.paListarProducto_Result)">
+            <Parameter Name="parametro" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="paProductoListar" ReturnType="Collection(LabBroasteriaModel.paProductoListar_Result)">
             <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
@@ -780,6 +792,18 @@
           <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="paListarCliente_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="documento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="paListarProducto_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="codigo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="stock" Nullable="false" />
+          <Property Type="Decimal" Name="precioVenta" Nullable="true" Precision="10" Scale="2" />
         </ComplexType>
         <ComplexType Name="paProductoListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -1009,6 +1033,26 @@
                 <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
                 <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paListarCliente" FunctionName="LabBroasteriaModel.Store.paListarCliente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabBroasteriaModel.paListarCliente_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="documento" ColumnName="documento" />
+                <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paListarProducto" FunctionName="LabBroasteriaModel.Store.paListarProducto">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LabBroasteriaModel.paListarProducto_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="stock" ColumnName="stock" />
+                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

@@ -300,7 +300,31 @@ CREATE PROC paProductooListar @parametro VARCHAR(100)
          c.descripcion LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' 
    )
 END
-
+GO
 select * from producto
+
+--LISTAR CLIENTE VENTA
+ CREATE PROC paListarCliente @parametro VARCHAR(100)    
+  AS SELECT cl.id, cl.documento, cl.nombreCompleto FROM Cliente cl
+  WHERE estado <> -1 AND cl.nombreCompleto LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+  ORDER BY cl.nombreCompleto;
+
+
+  --LISTAR PRODUCTO VENTA
+   CREATE PROC paListarProducto @parametro VARCHAR(100)    
+  AS SELECT pr.id, pr.codigo, pr.nombre, pr.stock, pr.precioVenta
+  FROM Producto pr 
+  WHERE
+  prr.estado <> -1 AND pr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+GO
+
+
+  --LISTAR PRODUCTO VENTA
+  CREATE PROC paListarProducto @parametro VARCHAR(100)    
+  AS SELECT pr.id, pr.codigo, pr.nombre, pr.stock, pr.precioVenta
+  FROM Producto pr 
+  WHERE
+  pr.estado <> -1 AND pr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+GO
 
 

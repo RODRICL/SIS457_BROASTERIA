@@ -202,6 +202,26 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paListarCliente" FunctionName="LabBroasteriaModel.Store.paListarCliente">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabBroasteriaModel.paListarCliente_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paListarProducto" FunctionName="LabBroasteriaModel.Store.paListarProducto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabBroasteriaModel.paListarProducto_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="paProductoListar" FunctionName="LabBroasteriaModel.Store.paProductoListar">
       <ResultMapping>
         <ComplexTypeMapping TypeName="LabBroasteriaModel.paProductoListar_Result">

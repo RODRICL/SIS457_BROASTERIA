@@ -72,5 +72,12 @@ namespace ClnBroasteria
                 return context.Producto.Any(p => p.codigo == codigo && p.estado != -1);
             }
         }
+        public static List<paListarProducto_Result> listarPro(string parametro)
+        {
+            using (var context = new LabBroasteriaEntities())
+            {
+                return context.paListarProducto(parametro).ToList();
+            }
+        }
     }
 }

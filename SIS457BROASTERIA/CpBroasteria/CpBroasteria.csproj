@@ -82,6 +82,18 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListarCliente.Designer.cs">
+      <DependentUpon>FrmListarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListarProducto.Designer.cs">
+      <DependentUpon>FrmListarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListarCliente.resx">
+      <DependentUpon>FrmListarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListarProducto.resx">
+      <DependentUpon>FrmListarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
