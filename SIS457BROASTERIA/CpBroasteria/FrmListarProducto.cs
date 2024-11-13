@@ -38,10 +38,11 @@ namespace CpBroasteria
             {
                 string codigo = dgvLista.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
                 string nombre = dgvLista.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                string descripcion = dgvLista.Rows[e.RowIndex].Cells["descripcion"].Value.ToString();
                 string stock = dgvLista.Rows[e.RowIndex].Cells["stock"].Value.ToString();
                 string precioVenta = dgvLista.Rows[e.RowIndex].Cells["precioVenta"].Value.ToString();
 
-                frmVenta.SetListaProducto( codigo, nombre, stock, precioVenta);
+                frmVenta.SetListaProducto( codigo, nombre, descripcion, stock, precioVenta);
                 this.Close();
             }
         }

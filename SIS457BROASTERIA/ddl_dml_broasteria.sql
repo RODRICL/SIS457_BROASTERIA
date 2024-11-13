@@ -320,8 +320,8 @@ GO
 
 
   --LISTAR PRODUCTO VENTA
-  CREATE PROC paListarProducto @parametro VARCHAR(100)    
-  AS SELECT pr.id, pr.codigo, pr.nombre, pr.stock, pr.precioVenta
+ALTER PROC paListarProducto @parametro VARCHAR(100)    
+  AS SELECT pr.id, pr.codigo, pr.nombre,pr.descripcion, pr.stock, pr.precioVenta
   FROM Producto pr 
   WHERE
   pr.estado <> -1 AND pr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'

@@ -420,6 +420,7 @@
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="String" Name="codigo" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="100" />
     <Property Type="Int32" Name="stock" Nullable="false" />
     <Property Type="Decimal" Name="precioVenta" Nullable="true" Precision="10" Scale="2" />
   </ComplexType>
