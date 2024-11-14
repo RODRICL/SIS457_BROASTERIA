@@ -20,35 +20,58 @@ namespace ClnBroasteria
 
         public void Insertar(Venta venta, DetalleVenta[] detalles, Cliente cliente)
         {
-            var clienteExistente = _context.Cliente.FirstOrDefault(c => c.documento == cliente.documento);
-            if (clienteExistente == null)
+            using (var transaction = _context.Database.BeginTransaction())
             {
-                clienteExistente = _context.Cliente.Add(cliente);
-            }
-            else
-            {
-                clienteExistente.nombreCompleto = cliente.nombreCompleto;
-            }
-
-            venta.documentoCliente = clienteExistente.documento;
-            _context.Venta.Add(venta);
-
-            foreach (var detalle in detalles)
-            {
-                detalle.idVenta = venta.id;
-                _context.DetalleVenta.Add(detalle);
-
-                var producto = _context.Producto.Find(detalle.idProducto);
-                if (producto.stock < detalle.cantidad)
+                try
                 {
-                    throw new Exception($"Stock insuficiente para el producto {producto.nombre}");
-                }
-                producto.stock -= detalle.cantidad;
-                _context.Entry(producto).State = EntityState.Modified;
-            }
+                    // Verificar o agregar cliente
+                    var clienteExistente = _context.Cliente.FirstOrDefault(c => c.documento == cliente.documento);
+                    if (clienteExistente == null)
+                    {
+                        clienteExistente = _context.Cliente.Add(cliente);
+                    }
+                    else
+                    {
+                        clienteExistente.nombreCompleto = cliente.nombreCompleto;
+                    }
 
-            _context.SaveChanges();
+                    // Asignar el cliente a la venta
+                    venta.documentoCliente = clienteExistente.documento;
+                    _context.Venta.Add(venta);
+
+                    foreach (var detalle in detalles)
+                    {
+                        detalle.idVenta = venta.id;
+                        _context.DetalleVenta.Add(detalle);
+
+                        var producto = _context.Producto.Find(detalle.idProducto);
+                        if (producto == null)
+                        {
+                            throw new Exception($"El producto con ID {detalle.idProducto} no existe.");
+                        }
+
+                        // Verificar stock
+                        if (producto.stock < detalle.cantidad)
+                        {
+                            throw new Exception($"Stock insuficiente para el producto {producto.nombre}. Solo quedan {producto.stock} unidades.");
+                        }
+
+                        // Actualizar stock del producto
+                        producto.stock -= detalle.cantidad;
+                        _context.Entry(producto).State = EntityState.Modified;
+                    }
+
+                    // Guardar cambios y confirmar transacción
+                    _context.SaveChanges();
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    // Si ocurre un error, revertir la transacción
+                    transaction.Rollback();
+                    throw new Exception($"Ocurrió un error al registrar la venta: {ex.Message}");
+                }
+            }
         }
     }
 }
-
