@@ -39,9 +39,9 @@
             this.btnCaCategoria = new C1.Win.Ribbon.RibbonButton();
             this.btnCaProductos = new C1.Win.Ribbon.RibbonButton();
             this.ribbonGroup2 = new C1.Win.Ribbon.RibbonGroup();
-            this.btnCaProveedor = new C1.Win.Ribbon.RibbonButton();
-            this.ribbonGroup3 = new C1.Win.Ribbon.RibbonGroup();
             this.btnCaCliente = new C1.Win.Ribbon.RibbonButton();
+            this.ribbonGroup3 = new C1.Win.Ribbon.RibbonGroup();
+            this.btnCaProveedor = new C1.Win.Ribbon.RibbonButton();
             this.ribbonTab2 = new C1.Win.Ribbon.RibbonTab();
             this.ribbonGroup4 = new C1.Win.Ribbon.RibbonGroup();
             this.ribbonTab3 = new C1.Win.Ribbon.RibbonTab();
@@ -61,7 +61,6 @@
             // c1Ribbon1
             // 
             this.c1Ribbon1.ApplicationMenuHolder = this.ribbonApplicationMenu1;
-          
             this.c1Ribbon1.BottomToolBarHolder = this.ribbonBottomToolBar1;
             this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
             this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);
@@ -123,28 +122,28 @@
             // 
             // ribbonGroup2
             // 
-            this.ribbonGroup2.Items.Add(this.btnCaProveedor);
+            this.ribbonGroup2.Items.Add(this.btnCaCliente);
             this.ribbonGroup2.Name = "ribbonGroup2";
-            // 
-            // btnCaProveedor
-            // 
-            this.btnCaProveedor.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.btnCaProveedor.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(96, 96), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnCaProveedor.IconSet")))));
-            this.btnCaProveedor.Name = "btnCaProveedor";
-            this.btnCaProveedor.Text = "Clientes";
-            this.btnCaProveedor.Click += new System.EventHandler(this.btnCaProveedor_Click);
-            // 
-            // ribbonGroup3
-            // 
-            this.ribbonGroup3.Items.Add(this.btnCaCliente);
-            this.ribbonGroup3.Name = "ribbonGroup3";
             // 
             // btnCaCliente
             // 
             this.btnCaCliente.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
-            this.btnCaCliente.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(256, 256), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnCaCliente.IconSet")))));
+            this.btnCaCliente.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(96, 96), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnCaCliente.IconSet")))));
             this.btnCaCliente.Name = "btnCaCliente";
-            this.btnCaCliente.Text = "Proveedor";
+            this.btnCaCliente.Text = "Clientes";
+            this.btnCaCliente.Click += new System.EventHandler(this.btnCaProveedor_Click);
+            // 
+            // ribbonGroup3
+            // 
+            this.ribbonGroup3.Items.Add(this.btnCaProveedor);
+            this.ribbonGroup3.Name = "ribbonGroup3";
+            // 
+            // btnCaProveedor
+            // 
+            this.btnCaProveedor.IconSet.Add(new C1.Framework.C1BitmapIcon("DefaultImage", new System.Drawing.Size(16, 16), System.Drawing.Color.Transparent, "DefaultImage", -1));
+            this.btnCaProveedor.IconSet.Add(new C1.Framework.C1BitmapIcon(null, new System.Drawing.Size(256, 256), System.Drawing.Color.Transparent, ((System.Drawing.Image)(resources.GetObject("btnCaProveedor.IconSet")))));
+            this.btnCaProveedor.Name = "btnCaProveedor";
+            this.btnCaProveedor.Text = "Proveedor";
             // 
             // ribbonTab2
             // 
@@ -251,9 +250,9 @@
         private C1.Win.Ribbon.RibbonTopToolBar ribbonTopToolBar1;
         private C1.Win.Ribbon.RibbonButton btnCaProductos;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup2;
-        private C1.Win.Ribbon.RibbonButton btnCaProveedor;
-        private C1.Win.Ribbon.RibbonGroup ribbonGroup3;
         private C1.Win.Ribbon.RibbonButton btnCaCliente;
+        private C1.Win.Ribbon.RibbonGroup ribbonGroup3;
+        private C1.Win.Ribbon.RibbonButton btnCaProveedor;
         private C1.Win.Ribbon.RibbonTab ribbonTab2;
         private C1.Win.Ribbon.RibbonGroup ribbonGroup4;
         private C1.Win.Ribbon.RibbonTab ribbonTab3;

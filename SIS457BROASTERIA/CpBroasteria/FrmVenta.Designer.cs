@@ -45,6 +45,8 @@
             this.txtdocumento = new System.Windows.Forms.TextBox();
             this.lblCedulaIdentidad = new System.Windows.Forms.Label();
             this.gbxInformacionProducto = new System.Windows.Forms.GroupBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
@@ -70,8 +72,6 @@
             this.erpCantidadVender = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpPagaCon = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgvVentas = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.gbxInformacionVenta.SuspendLayout();
             this.gbxInformacionCliente.SuspendLayout();
             this.gbxInformacionProducto.SuspendLayout();
@@ -299,6 +299,29 @@
             this.gbxInformacionProducto.TabStop = false;
             this.gbxInformacionProducto.Text = "Información Producto";
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(304, 68);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(194, 26);
+            this.txtDescripcion.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(301, 44);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 18);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Descripción:";
+            // 
             // txtStock
             // 
             this.txtStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -489,6 +512,7 @@
             this.txtPagaCon.Name = "txtPagaCon";
             this.txtPagaCon.Size = new System.Drawing.Size(119, 20);
             this.txtPagaCon.TabIndex = 47;
+            this.txtPagaCon.TextChanged += new System.EventHandler(this.txtPagaCon_TextChanged);
             // 
             // txtCambio
             // 
@@ -587,29 +611,6 @@
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(748, 273);
             this.dgvVentas.TabIndex = 49;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(301, 44);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 18);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Descripción:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(304, 68);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(194, 26);
-            this.txtDescripcion.TabIndex = 36;
             // 
             // FrmVenta
             // 

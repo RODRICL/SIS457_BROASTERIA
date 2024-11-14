@@ -52,7 +52,9 @@ namespace CpBroasteria
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            new FrmCliente().ShowDialog();
+            var frmCliente = new FrmCliente(this);
+            frmCliente.ShowDialog();
+
         }
         private void limpiarDocumento()
         {
@@ -67,6 +69,7 @@ namespace CpBroasteria
             dgvVentas.Columns.Add("PrecioVenta", "Precio de Venta");
             dgvVentas.Columns.Add("Cantidad", "Cantidad");
             dgvVentas.Columns.Add("Total", "Total");
+            txtPagaCon.TextChanged += txtPagaCon_TextChanged;
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
@@ -172,6 +175,29 @@ namespace CpBroasteria
             else
             {
                 MessageBox.Show("Por favor, selecciona un producto para quitar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtPagaCon_TextChanged(object sender, EventArgs e)
+        {
+            decimal montoAPagar;
+            decimal pagaCon;
+
+            if (decimal.TryParse(txtMontoAPagar.Text, out montoAPagar) && decimal.TryParse(txtPagaCon.Text, out pagaCon))
+            {
+                if (pagaCon >= montoAPagar)
+                {
+                    decimal cambio = pagaCon - montoAPagar;
+                    txtCambio.Text = cambio.ToString("0.00");
+                }
+                else
+                {
+                    txtCambio.Text = "0.00"; 
+                }
+            }
+            else
+            {
+                txtCambio.Text = "0.00"; 
             }
         }
     }

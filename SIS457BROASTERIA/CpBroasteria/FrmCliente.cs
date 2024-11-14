@@ -15,10 +15,15 @@ namespace CpBroasteria
     public partial class FrmCliente : Form
     {
         private bool esNuevo = false;
-        public FrmCliente()
+        private FrmVenta frmVenta; // Referencia a FrmVenta
+
+        // Constructor modificado para recibir una instancia de FrmVenta
+        public FrmCliente(FrmVenta frmVenta)
         {
             InitializeComponent();
+            this.frmVenta = frmVenta;
         }
+
         public void listar()
         {
             var lista = ClienteCln.listarPa(txtParametroCliente.Text);
@@ -30,12 +35,12 @@ namespace CpBroasteria
             dgvListaCliente.Columns["email"].HeaderText = "Correo";
             dgvListaCliente.Columns["telefono"].HeaderText = "Teléfono";
 
-
             btnEditar.Enabled = lista.Count() > 0;
             btnEliminar.Enabled = lista.Count() > 0;
 
             if (lista.Count > 0) dgvListaCliente.CurrentCell = dgvListaCliente.Rows[0].Cells["documento"];
         }
+
         private void FrmCliente_Load(object sender, EventArgs e)
         {
             txtNombreCompleto.KeyPress += Util.onlyLetters;
@@ -43,6 +48,7 @@ namespace CpBroasteria
             DesactivarCampos();
             listar();
         }
+
         private void DesactivarCampos()
         {
             txtDocumentoCliente.Enabled = false;
@@ -50,6 +56,7 @@ namespace CpBroasteria
             txtCorreoCliente.Enabled = false;
             txtTelefonoCliente.Enabled = false;
         }
+
         private void HabilitarCampos()
         {
             txtDocumentoCliente.Enabled = true;
@@ -57,6 +64,7 @@ namespace CpBroasteria
             txtCorreoCliente.Enabled = true;
             txtTelefonoCliente.Enabled = true;
         }
+
         private void limpiar()
         {
             txtDocumentoCliente.Text = string.Empty;
@@ -69,6 +77,7 @@ namespace CpBroasteria
         {
             if (e.KeyChar == (char)Keys.Enter) listar();
         }
+
         private bool validar()
         {
             bool esValido = true;
@@ -103,7 +112,7 @@ namespace CpBroasteria
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             esNuevo = true;
-            txtDocumentoCliente.Focus(); 
+            txtDocumentoCliente.Focus();
             HabilitarCampos();
         }
 
@@ -117,12 +126,13 @@ namespace CpBroasteria
                 cliente.email = txtCorreoCliente.Text.Trim();
                 cliente.telefono = txtTelefonoCliente.Text.Trim();
                 cliente.usuarioRegistro = Util.usuario.usuario1;
+
                 if (esNuevo)
                 {
                     if (ClienteCln.ExisteDocumento(cliente.documento))
                     {
                         MessageBox.Show("NO SE PUEDE AGREGAR, documento ya existente.", ":::Broasteria - Mensaje :::",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -139,8 +149,8 @@ namespace CpBroasteria
                     if (cliente.documento != clienteExistente.documento && ClienteCln.ExisteDocumento(cliente.documento))
                     {
                         MessageBox.Show("NO SE PUEDE ACTUALIZAR, documento ya existente.", ":::Broasteria - Mensaje :::",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; 
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
                     cliente.id = id;
@@ -148,11 +158,14 @@ namespace CpBroasteria
                 }
                 listar();
                 MessageBox.Show("Cliente guardado correctamente", ":::Broasteria - Mensaje :::",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Llamar a FrmVenta para actualizar los datos del cliente creado
+                frmVenta.SetListaCliente(cliente.documento, cliente.nombreCompleto);
+
+                limpiar();
+                DesactivarCampos();
             }
-            limpiar();
-            DesactivarCampos();
-        
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -176,13 +189,13 @@ namespace CpBroasteria
             string documento = dgvListaCliente.Rows[index].Cells["documento"].Value.ToString();
             DialogResult dialog =
                 MessageBox.Show($"¿Está seguro que desea dar de baja al Cliente con N° de documento {documento}?",
-                "::: Broasteria - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                                "::: Broasteria - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
                 ClienteCln.eliminar(id, Util.usuario.usuario1);
                 listar();
                 MessageBox.Show("Cliente dado de baja correctamente", "::: Broasteria - Mensaje :::",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

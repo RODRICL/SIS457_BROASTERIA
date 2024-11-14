@@ -38,7 +38,6 @@ namespace ClnBroasteria
                 detalle.idVenta = venta.id;
                 _context.DetalleVenta.Add(detalle);
 
-                // Validar y actualizar el stock del producto
                 var producto = _context.Producto.Find(detalle.idProducto);
                 if (producto.stock < detalle.cantidad)
                 {
