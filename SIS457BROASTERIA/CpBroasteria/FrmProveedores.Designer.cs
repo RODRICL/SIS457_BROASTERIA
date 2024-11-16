@@ -361,7 +361,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProveedores";
-            this.Text = "BROASTERIA ~ PROVEEDOR🍗🍗";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProducto)).EndInit();
             this.gbxLista.ResumeLayout(false);
             this.ResumeLayout(false);

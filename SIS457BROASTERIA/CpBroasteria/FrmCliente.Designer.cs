@@ -181,7 +181,7 @@
             this.dgvListaCliente.ReadOnly = true;
             this.dgvListaCliente.RowHeadersWidth = 51;
             this.dgvListaCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCliente.Size = new System.Drawing.Size(628, 356);
+            this.dgvListaCliente.Size = new System.Drawing.Size(628, 343);
             this.dgvListaCliente.TabIndex = 0;
             // 
             // lblTitulo
