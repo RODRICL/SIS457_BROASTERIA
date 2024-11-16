@@ -23,5 +23,6 @@ namespace CadBroasteria
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
+        public string categoriaDescripcion { get; set; }
     }
 }

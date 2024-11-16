@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6a295d3a73c84d10ac5eb44f30ea7c03" Name="Diagram1">
+      <Diagram DiagramId="d5c04aa5f2cb45f98c277a0ba0593b52" Name="Diagram1">
         <EntityTypeShape EntityType="LabBroasteriaModel.Categoria" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="LabBroasteriaModel.Cliente" Width="1.5" PointX="8.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="LabBroasteriaModel.Compra" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
@@ -15,8 +15,8 @@
         <EntityTypeShape EntityType="LabBroasteriaModel.HistorialVenta" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
         <EntityTypeShape EntityType="LabBroasteriaModel.Producto" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="LabBroasteriaModel.Proveedor" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Usuario" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Venta" Width="1.5" PointX="6" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Usuario" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Venta" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Compra_Proveedor" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Compra_Usuario" ManuallyRouted="false" />
@@ -27,7 +27,6 @@
         <AssociationConnector Association="LabBroasteriaModel.fk_Usuario_Empleado" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_HistorialCompra_Producto" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_HistorialVenta_Producto" ManuallyRouted="false" />
-        <AssociationConnector Association="LabBroasteriaModel.fk_Venta_Usuario" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -27,11 +27,15 @@ namespace CpBroasteria
             dgvListaProducto.DataSource = lista;
             dgvListaProducto.Columns["id"].Visible = false;
             dgvListaProducto.Columns["estado"].Visible = false;
+            dgvListaProducto.Columns["idCategoria"].Visible = false;
             dgvListaProducto.Columns["codigo"].HeaderText = "CÓDIGO";
-            dgvListaProducto.Columns["nombre"].HeaderText = "NOMBRE";
-            dgvListaProducto.Columns["descripcion"].HeaderText = "DESCRIPCION";
+            dgvListaProducto.Columns["nombre"].HeaderText = "NOMBRE PRODUCTO";
+            dgvListaProducto.Columns["descripcion"].HeaderText = "DESCRIPCIÓN";
+            dgvListaProducto.Columns["categoriaDescripcion"].HeaderText = "CATEGORIA";
+            dgvListaProducto.Columns["categoriaDescripcion"].DisplayIndex = 5;
             dgvListaProducto.Columns["stock"].HeaderText = "STOCK";
             dgvListaProducto.Columns["precioVenta"].HeaderText = "PRECIO DE VENTA";
+
             btnEditar.Enabled = lista.Count() > 0;
             btnEliminar.Enabled = lista.Count() > 0;
 
@@ -48,6 +52,7 @@ namespace CpBroasteria
 
         private void FrmProducto_Load(object sender, EventArgs e)
         {
+            txtprecioVenta.KeyPress += Util.onlyNumbers;
             listar();
             CargarCategorias();
             DesactivarCampos();
@@ -75,17 +80,22 @@ namespace CpBroasteria
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 esValido = false;
-                erpCodigo.SetError(txtCodigo, "El campo documento es obligatorio");
+                erpCodigo.SetError(txtCodigo, "El campo codigo es obligatorio");
             }
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 esValido = false;
-                erpNombre.SetError(txtNombre, "El campo razon social es obligatorio");
+                erpNombre.SetError(txtNombre, "El campo nombre Producto es obligatorio");
             }
             if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
                 esValido = false;
-                erpDescripcion.SetError(txtDescripcion, "El campo correo es obligatorio");
+                erpDescripcion.SetError(txtDescripcion, "El campo Descripción es obligatorio");
+            }
+            if (string.IsNullOrEmpty(txtprecioVenta.Text))
+            {
+                esValido = false;
+                erpPrecioVenta.SetError(txtprecioVenta, "El campo precio Venta es obligatorio");
             }
 
             return esValido;
@@ -120,16 +130,15 @@ namespace CpBroasteria
                 producto.descripcion = txtDescripcion.Text.Trim();
                 producto.precioVenta = decimal.Parse(txtprecioVenta.Text);
                 producto.stock = int.Parse(nudStock.Text);
-                producto.idCategoria = (int)cbxCategoria.SelectedValue; 
+                producto.idCategoria = (int)cbxCategoria.SelectedValue;
                 producto.usuarioRegistro = Util.usuario.usuario1;
 
                 if (esNuevo)
                 {
-
                     if (ProductoCln.ExisteCodigo(producto.codigo))
                     {
                         MessageBox.Show("NO SE PUEDE AGREGAR, código ya existente.", ":::Broasteria - Mensaje :::",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -143,23 +152,22 @@ namespace CpBroasteria
                     int id = Convert.ToInt32(dgvListaProducto.Rows[index].Cells["id"].Value);
                     var productoExistente = ProductoCln.obtenerUno(id);
 
-                    
                     if (producto.codigo != productoExistente.codigo && ProductoCln.ExisteCodigo(producto.codigo))
                     {
-                        MessageBox.Show("No se puede actualizar, código ya existente.", ":::Licoreria - Mensaje :::",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; 
+                        MessageBox.Show("No se puede actualizar, código ya existente.", ":::Broasteria - Mensaje :::",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
-                    producto.id = id; 
+                    producto.id = id;
                     ProductoCln.actualizar(producto);
                 }
-                listar();
+                limpiar();
                 MessageBox.Show("Producto guardado correctamente", ":::Broasteria - Mensaje :::",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listar();
+                DesactivarCampos();
             }
-            limpiar();
-            DesactivarCampos();
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -177,9 +185,9 @@ namespace CpBroasteria
         {
             int index = dgvListaProducto.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvListaProducto.Rows[index].Cells["id"].Value);
-            string codigo = dgvListaProducto.Rows[index].Cells["codigo"].Value.ToString();
+            string nombre = dgvListaProducto.Rows[index].Cells["nombre"].Value.ToString();
             DialogResult dialog =
-                MessageBox.Show($"¿Está seguro que desea dar de baja al producto con codigo {codigo}?",
+                MessageBox.Show($"¿Está seguro que desea dar de baja al producto: {nombre}?",
                 "::: Broasteria - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
@@ -219,7 +227,4 @@ namespace CpBroasteria
             listar();
         }
     }
-
-
-  
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoria));
             this.txtParametroCategoria = new System.Windows.Forms.TextBox();
             this.txtDescripcionCategoria = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -52,11 +53,11 @@
             // 
             // txtParametroCategoria
             // 
-            this.txtParametroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametroCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParametroCategoria.Location = new System.Drawing.Point(476, 87);
-            this.txtParametroCategoria.Margin = new System.Windows.Forms.Padding(5);
+            this.txtParametroCategoria.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtParametroCategoria.Name = "txtParametroCategoria";
-            this.txtParametroCategoria.Size = new System.Drawing.Size(310, 24);
+            this.txtParametroCategoria.Size = new System.Drawing.Size(310, 27);
             this.txtParametroCategoria.TabIndex = 127;
             this.txtParametroCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametroCategoria_KeyPress);
             // 
@@ -64,7 +65,7 @@
             // 
             this.txtDescripcionCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcionCategoria.Location = new System.Drawing.Point(13, 173);
-            this.txtDescripcionCategoria.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescripcionCategoria.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDescripcionCategoria.Name = "txtDescripcionCategoria";
             this.txtDescripcionCategoria.Size = new System.Drawing.Size(231, 24);
             this.txtDescripcionCategoria.TabIndex = 123;
@@ -76,7 +77,7 @@
             this.btnBuscar.Image = global::CpBroasteria.Properties.Resources.search;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(800, 76);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(116, 43);
             this.btnBuscar.TabIndex = 150;
@@ -121,7 +122,7 @@
             this.btnEditar.Image = global::CpBroasteria.Properties.Resources.edit;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditar.Location = new System.Drawing.Point(23, 285);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 50);
             this.btnEditar.TabIndex = 138;
@@ -137,7 +138,7 @@
             this.btnNuevo.Image = global::CpBroasteria.Properties.Resources._new;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(23, 221);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 52);
             this.btnNuevo.TabIndex = 137;
@@ -153,7 +154,7 @@
             this.btnEliminar.Image = global::CpBroasteria.Properties.Resources.delete;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.Location = new System.Drawing.Point(145, 286);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(99, 49);
             this.btnEliminar.TabIndex = 139;
@@ -216,7 +217,7 @@
             this.btnCerrar.Image = global::CpBroasteria.Properties.Resources.close3;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrar.Location = new System.Drawing.Point(75, 360);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(95, 49);
             this.btnCerrar.TabIndex = 140;
@@ -282,9 +283,10 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtParametroCategoria);
             this.Controls.Add(this.txtDescripcionCategoria);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Categoria";
+            this.Text = "BROASTERIA~CATEGORIA🍗🍗";
             this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCategoria)).EndInit();

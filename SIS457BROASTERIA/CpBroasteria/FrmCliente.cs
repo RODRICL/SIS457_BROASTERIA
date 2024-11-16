@@ -43,6 +43,7 @@ namespace CpBroasteria
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
+            txtDocumentoCliente.KeyPress += Util.onlyNumbers;
             txtNombreCompleto.KeyPress += Util.onlyLetters;
             txtTelefonoCliente.KeyPress += Util.onlyNumbers;
             DesactivarCampos();
@@ -112,8 +113,8 @@ namespace CpBroasteria
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             esNuevo = true;
-            txtDocumentoCliente.Focus();
             HabilitarCampos();
+            txtDocumentoCliente.Focus();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -178,8 +179,8 @@ namespace CpBroasteria
             txtNombreCompleto.Text = cliente.nombreCompleto;
             txtCorreoCliente.Text = cliente.email;
             txtTelefonoCliente.Text = cliente.telefono;
-            txtDocumentoCliente.Focus();
             HabilitarCampos();
+            txtDocumentoCliente.Focus();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

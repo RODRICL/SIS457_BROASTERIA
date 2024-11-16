@@ -31,11 +31,24 @@ namespace CpBroasteria
 
         private void btnCaProveedor_Click(object sender, EventArgs e)
         {
+
         }
 
         private void btnCaVenta_Click(object sender, EventArgs e)
         {
             new FrmVenta().ShowDialog();
+        }
+
+
+        private void btnCaCliente_Click(object sender, EventArgs e)
+        {
+            var frmVenta = new FrmVenta();
+            new FrmCliente(frmVenta).ShowDialog();
+        }
+
+        private void btnCaProveedor_Click_1(object sender, EventArgs e)
+        {
+            new FrmProveedores().ShowDialog();
         }
     }
 }

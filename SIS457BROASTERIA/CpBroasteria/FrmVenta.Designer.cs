@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVenta));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.gbxInformacionVenta = new System.Windows.Forms.GroupBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.gbxInformacionCliente = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
@@ -71,6 +71,7 @@
             this.erpCodigoProducto = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpCantidadVender = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpPagaCon = new System.Windows.Forms.ErrorProvider(this.components);
+            this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.gbxInformacionVenta.SuspendLayout();
             this.gbxInformacionCliente.SuspendLayout();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpCodigoProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCantidadVender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPagaCon)).BeginInit();
+            this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,8 +137,8 @@
             // 
             this.gbxInformacionVenta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbxInformacionVenta.BackColor = System.Drawing.Color.White;
+            this.gbxInformacionVenta.Controls.Add(this.txtFecha);
             this.gbxInformacionVenta.Controls.Add(this.lblFecha);
-            this.gbxInformacionVenta.Controls.Add(this.dtpFecha);
             this.gbxInformacionVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxInformacionVenta.Location = new System.Drawing.Point(21, 127);
             this.gbxInformacionVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -147,6 +149,14 @@
             this.gbxInformacionVenta.TabStop = false;
             this.gbxInformacionVenta.Text = "Información Venta";
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(16, 57);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(5);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(128, 34);
+            this.txtFecha.TabIndex = 3;
+            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
@@ -156,18 +166,6 @@
             this.lblFecha.Size = new System.Drawing.Size(75, 24);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha:";
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Enabled = false;
-            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(11, 57);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpFecha.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(369, 27);
-            this.dtpFecha.TabIndex = 0;
-            this.dtpFecha.Value = new System.DateTime(2024, 6, 7, 21, 24, 35, 0);
             // 
             // gbxInformacionCliente
             // 
@@ -489,7 +487,7 @@
             // txtMontoAPagar
             // 
             this.txtMontoAPagar.Location = new System.Drawing.Point(1057, 491);
-            this.txtMontoAPagar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMontoAPagar.Margin = new System.Windows.Forms.Padding(5);
             this.txtMontoAPagar.Name = "txtMontoAPagar";
             this.txtMontoAPagar.Size = new System.Drawing.Size(157, 22);
             this.txtMontoAPagar.TabIndex = 46;
@@ -497,7 +495,7 @@
             // txtPagaCon
             // 
             this.txtPagaCon.Location = new System.Drawing.Point(1057, 560);
-            this.txtPagaCon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPagaCon.Margin = new System.Windows.Forms.Padding(5);
             this.txtPagaCon.Name = "txtPagaCon";
             this.txtPagaCon.Size = new System.Drawing.Size(157, 22);
             this.txtPagaCon.TabIndex = 47;
@@ -506,7 +504,7 @@
             // txtCambio
             // 
             this.txtCambio.Location = new System.Drawing.Point(1057, 629);
-            this.txtCambio.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCambio.Margin = new System.Windows.Forms.Padding(5);
             this.txtCambio.Name = "txtCambio";
             this.txtCambio.Size = new System.Drawing.Size(157, 22);
             this.txtCambio.TabIndex = 48;
@@ -575,6 +573,21 @@
             // 
             this.erpPagaCon.ContainerControl = this;
             // 
+            // gbxLista
+            // 
+            this.gbxLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxLista.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.gbxLista.Controls.Add(this.dgvVentas);
+            this.gbxLista.Font = new System.Drawing.Font("Franklin Gothic Book", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxLista.Location = new System.Drawing.Point(30, 385);
+            this.gbxLista.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxLista.Name = "gbxLista";
+            this.gbxLista.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxLista.Size = new System.Drawing.Size(998, 369);
+            this.gbxLista.TabIndex = 88;
+            this.gbxLista.TabStop = false;
+            // 
             // dgvVentas
             // 
             this.dgvVentas.AllowUserToAddRows = false;
@@ -584,31 +597,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvVentas.BackgroundColor = System.Drawing.Color.Snow;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(31, 406);
-            this.dgvVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvVentas.Location = new System.Drawing.Point(8, 16);
+            this.dgvVentas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVentas.MultiSelect = false;
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.RowHeadersWidth = 51;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(997, 336);
-            this.dgvVentas.TabIndex = 49;
+            this.dgvVentas.Size = new System.Drawing.Size(982, 345);
+            this.dgvVentas.TabIndex = 0;
             // 
             // FrmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 770);
-            this.Controls.Add(this.dgvVentas);
+            this.Controls.Add(this.gbxLista);
             this.Controls.Add(this.txtCambio);
             this.Controls.Add(this.txtPagaCon);
             this.Controls.Add(this.txtMontoAPagar);
@@ -625,10 +630,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "::: BROASTERIA - VENTA :::";
+            this.Text = "BROASTERIA ~ VENTA 🍗🍗";
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             this.gbxInformacionVenta.ResumeLayout(false);
             this.gbxInformacionVenta.PerformLayout();
@@ -641,6 +647,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpCodigoProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCantidadVender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPagaCon)).EndInit();
+            this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -655,7 +662,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox gbxInformacionVenta;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.GroupBox gbxInformacionCliente;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtdocumento;
@@ -683,7 +689,6 @@
         private System.Windows.Forms.ErrorProvider erpCodigoProducto;
         private System.Windows.Forms.ErrorProvider erpCantidadVender;
         private System.Windows.Forms.ErrorProvider erpPagaCon;
-        private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtPrecioVenta;
@@ -691,5 +696,8 @@
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.GroupBox gbxLista;
+        private System.Windows.Forms.DataGridView dgvVentas;
     }
 }

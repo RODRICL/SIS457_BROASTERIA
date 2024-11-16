@@ -18,7 +18,6 @@ namespace CadBroasteria
         public Usuario()
         {
             this.Compra = new HashSet<Compra>();
-            this.Venta = new HashSet<Venta>();
         }
     
         public int id { get; set; }
@@ -32,7 +31,5 @@ namespace CadBroasteria
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compra { get; set; }
         public virtual Empleado Empleado { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

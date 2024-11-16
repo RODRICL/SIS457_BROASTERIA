@@ -163,7 +163,6 @@
       <EntityTypeMapping TypeName="LabBroasteriaModel.Venta">
         <MappingFragment StoreEntitySet="Venta">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="tipoDocumento" ColumnName="tipoDocumento" />
           <ScalarProperty Name="numeroDocumento" ColumnName="numeroDocumento" />
           <ScalarProperty Name="documentoCliente" ColumnName="documentoCliente" />
@@ -236,6 +235,7 @@
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="categoriaDescripcion" ColumnName="categoriaDescripcion" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

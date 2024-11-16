@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.label1 = new System.Windows.Forms.Label();
             this.txtParametroCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,10 +41,6 @@
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvListaCliente = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtDocumentoCliente = new System.Windows.Forms.TextBox();
-            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
-            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
-            this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
@@ -54,6 +51,10 @@
             this.erpNombreCompleto = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDocumentoCliente = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpTelefonoCliente = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtDocumentoCliente = new System.Windows.Forms.TextBox();
+            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
+            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
+            this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpCorreoCliente)).BeginInit();
@@ -197,42 +198,6 @@
             this.lblTitulo.Text = "Clientes";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtDocumentoCliente
-            // 
-            this.txtDocumentoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocumentoCliente.Location = new System.Drawing.Point(10, 126);
-            this.txtDocumentoCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDocumentoCliente.Name = "txtDocumentoCliente";
-            this.txtDocumentoCliente.Size = new System.Drawing.Size(235, 22);
-            this.txtDocumentoCliente.TabIndex = 107;
-            // 
-            // txtNombreCompleto
-            // 
-            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCompleto.Location = new System.Drawing.Point(10, 173);
-            this.txtNombreCompleto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(236, 22);
-            this.txtNombreCompleto.TabIndex = 108;
-            // 
-            // txtCorreoCliente
-            // 
-            this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoCliente.Location = new System.Drawing.Point(10, 218);
-            this.txtCorreoCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreoCliente.Name = "txtCorreoCliente";
-            this.txtCorreoCliente.Size = new System.Drawing.Size(235, 22);
-            this.txtCorreoCliente.TabIndex = 109;
-            // 
-            // txtTelefonoCliente
-            // 
-            this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(10, 265);
-            this.txtTelefonoCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
-            this.txtTelefonoCliente.Size = new System.Drawing.Size(235, 22);
-            this.txtTelefonoCliente.TabIndex = 110;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -344,6 +309,42 @@
             // 
             this.erpTelefonoCliente.ContainerControl = this;
             // 
+            // txtDocumentoCliente
+            // 
+            this.txtDocumentoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentoCliente.Location = new System.Drawing.Point(13, 125);
+            this.txtDocumentoCliente.MaxLength = 10;
+            this.txtDocumentoCliente.Name = "txtDocumentoCliente";
+            this.txtDocumentoCliente.Size = new System.Drawing.Size(223, 26);
+            this.txtDocumentoCliente.TabIndex = 107;
+            // 
+            // txtNombreCompleto
+            // 
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCompleto.Location = new System.Drawing.Point(13, 172);
+            this.txtNombreCompleto.MaxLength = 50;
+            this.txtNombreCompleto.Name = "txtNombreCompleto";
+            this.txtNombreCompleto.Size = new System.Drawing.Size(223, 26);
+            this.txtNombreCompleto.TabIndex = 108;
+            // 
+            // txtCorreoCliente
+            // 
+            this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreoCliente.Location = new System.Drawing.Point(12, 217);
+            this.txtCorreoCliente.MaxLength = 50;
+            this.txtCorreoCliente.Name = "txtCorreoCliente";
+            this.txtCorreoCliente.Size = new System.Drawing.Size(223, 26);
+            this.txtCorreoCliente.TabIndex = 109;
+            // 
+            // txtTelefonoCliente
+            // 
+            this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(13, 264);
+            this.txtTelefonoCliente.MaxLength = 8;
+            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(222, 26);
+            this.txtTelefonoCliente.TabIndex = 110;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,9 +370,10 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gbxLista);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmCliente";
+            this.Text = "BROASTERIA ~ CLIENTE 🍗🍗";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCliente)).EndInit();
@@ -403,13 +405,13 @@
         private System.Windows.Forms.GroupBox gbxLista;
         private System.Windows.Forms.DataGridView dgvListaCliente;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtTelefonoCliente;
-        private System.Windows.Forms.TextBox txtCorreoCliente;
-        private System.Windows.Forms.TextBox txtNombreCompleto;
-        private System.Windows.Forms.TextBox txtDocumentoCliente;
         private System.Windows.Forms.ErrorProvider erpCorreoCliente;
         private System.Windows.Forms.ErrorProvider erpNombreCompleto;
         private System.Windows.Forms.ErrorProvider erpDocumentoCliente;
         private System.Windows.Forms.ErrorProvider erpTelefonoCliente;
+        private System.Windows.Forms.TextBox txtTelefonoCliente;
+        private System.Windows.Forms.TextBox txtCorreoCliente;
+        private System.Windows.Forms.TextBox txtNombreCompleto;
+        private System.Windows.Forms.TextBox txtDocumentoCliente;
     }
 }

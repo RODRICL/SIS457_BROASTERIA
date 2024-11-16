@@ -247,8 +247,9 @@ AS
   SELECT * FROM Producto
   WHERE estado<>-1 AND nombre LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
 GO
-  EXEC paProductoListar 'soda';
+  EXEC paProductoListar 'pollo';
   GO
+  select * from paProductoListar
 
   --PROCEDIMIENTO LISTAR CLIENTES
 CREATE PROC paClienteListar
@@ -325,6 +326,30 @@ ALTER PROC paListarProducto @parametro VARCHAR(100)
   FROM Producto pr 
   WHERE
   pr.estado <> -1 AND pr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
+GO 
+select * from DetalleVenta
+
+
+--venta quitar el idusuario
+
+ALTER TABLE Venta
+DROP CONSTRAINT fk_Venta_Usuario;
+ALTER TABLE Venta
+DROP Column idUsuario;
+go
+--nuevo listar producto
+ALTER PROC paProductoListar @parametro VARCHAR(100)
+AS
+BEGIN
+    SELECT 
+        p.*,                -- Todas las columnas de la tabla Producto
+        c.descripcion AS categoriaDescripcion -- Descripción de la categoría
+    FROM 
+        Producto p
+    LEFT JOIN 
+        Categoria c ON p.idCategoria = c.id
+    WHERE 
+        p.estado <> -1 
+        AND p.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%';
+END
 GO
-
-

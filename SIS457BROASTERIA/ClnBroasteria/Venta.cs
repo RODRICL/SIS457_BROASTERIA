@@ -17,7 +17,15 @@ namespace ClnBroasteria
         {
             _context = context;
         }
-
+        public static int RegistrarVenta(Venta venta)
+        {
+            using (var context = new LabBroasteriaEntities())
+            {
+                context.Venta.Add(venta);
+                context.SaveChanges();
+                return venta.id;
+            }
+        }
         public void Insertar(Venta venta, DetalleVenta[] detalles, Cliente cliente)
         {
             using (var transaction = _context.Database.BeginTransaction())
@@ -71,6 +79,7 @@ namespace ClnBroasteria
                     transaction.Rollback();
                     throw new Exception($"Ocurrió un error al registrar la venta: {ex.Message}");
                 }
+
             }
         }
     }

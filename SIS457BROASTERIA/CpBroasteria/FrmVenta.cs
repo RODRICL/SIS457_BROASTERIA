@@ -15,11 +15,11 @@ namespace CpBroasteria
 {
     public partial class FrmVenta : Form
     {
+        private string idProductoSeleccionado;
         public FrmVenta()
         {
             InitializeComponent();
         }
-
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             string documento = txtdocumento.Text;
@@ -63,6 +63,13 @@ namespace CpBroasteria
         private void FrmVenta_Load(object sender, EventArgs e)
         {
             txtdocumento.KeyPress += Util.onlyNumbers;
+            var colIdProducto = new DataGridViewTextBoxColumn
+            {
+                Name = "idProducto",
+                Visible = false //para que oculte la columna idPro
+            };
+            dgvVentas.Columns.Add(colIdProducto);
+
             dgvVentas.Columns.Add("Codigo", "Código");
             dgvVentas.Columns.Add("Nombre", "Nombre");
             dgvVentas.Columns.Add("Descripcion", "Descripcion");
@@ -77,8 +84,9 @@ namespace CpBroasteria
             FrmListarProducto productoFrm = new FrmListarProducto(this);
             productoFrm.ShowDialog();
         }
-        public void SetListaProducto(string codigo, string nombre, string descripcion, string stock, string precioVenta)
+        public void SetListaProducto(string idProducto,string codigo, string nombre, string descripcion, string stock, string precioVenta)
         {
+            idProductoSeleccionado = idProducto;
             txtCodigoProducto.Text = codigo;
             txtProducto.Text = nombre;
             txtDescripcion.Text = descripcion;
@@ -142,7 +150,7 @@ namespace CpBroasteria
             var cantidad = int.Parse(nudCantidadVenta.Text);
             var total = precioVenta * cantidad;
 
-            dgvVentas.Rows.Add(codigo, nombre, descripcion, precioVenta, cantidad, total);
+            dgvVentas.Rows.Add(idProductoSeleccionado, codigo, nombre, descripcion, precioVenta, cantidad, total);
 
             LimpiarCampos();
             CalcularTotalPagar();
@@ -150,6 +158,7 @@ namespace CpBroasteria
 
         private void LimpiarCampos()
         {
+            idProductoSeleccionado = null;
             txtCodigoProducto.Text = string.Empty;
             txtProducto.Text = string.Empty;
             txtDescripcion.Text = string.Empty;
@@ -172,6 +181,7 @@ namespace CpBroasteria
 
             txtMontoAPagar.Text = totalPagar.ToString("0.00");
         }
+
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
@@ -212,110 +222,163 @@ namespace CpBroasteria
             }
         }
 
-        private void btnRegistrarVenta_Click(object sender, EventArgs e)
+        private void ActualizarStockVenta()
         {
-            if (!validar(RegistroVenta: true))
-            {
-                MessageBox.Show("Por favor, corrige los errores antes de registrar la venta.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txtdocumento.Text))
-            {
-                MessageBox.Show("El documento del cliente no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (dgvVentas.Rows.Count == 0)
-            {
-                MessageBox.Show("Debe agregar al menos un producto a la venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            List<DetalleVenta> detalles = new List<DetalleVenta>();
-
             foreach (DataGridViewRow row in dgvVentas.Rows)
             {
-                if (row.Cells["Codigo"].Value != null && row.Cells["PrecioVenta"].Value != null && row.Cells["Cantidad"].Value != null)
+                if (row.Cells["IdProducto"].Value != null)
                 {
-                    // Get product code and price
-                    string codigoProducto = row.Cells["Codigo"].Value.ToString();
+                    var idProducto = Convert.ToInt32(row.Cells["IdProducto"].Value);
+                    var cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value);
 
-                    if (!decimal.TryParse(row.Cells["PrecioVenta"].Value.ToString(), out decimal precioVenta))
+                    try
                     {
-                        MessageBox.Show($"El valor de la columna 'PrecioVenta' en la fila {row.Index + 1} no es un número válido.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        continue;
+                        // Llama al método ActualizarStock para reducir el stock
+                        bool actualizado = ProductoCln.ActualizarDisminuirStock(idProducto, cantidad);
+
+                        if (!actualizado)
+                        {
+                            MessageBox.Show($"No se pudo actualizar el stock para el producto ID {idProducto}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
-
-                    if (!int.TryParse(row.Cells["Cantidad"].Value.ToString(), out int cantidad))
+                    catch (Exception ex)
                     {
-                        MessageBox.Show($"El valor de la columna 'Cantidad' en la fila {row.Index + 1} no es un número válido.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        continue;
+                        MessageBox.Show($"Error al actualizar el producto ID {idProducto}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    var detalle = new DetalleVenta
-                    {
-                        // Assumes you have the product ID available from a previous query
-                        // Use the product ID, not the code, to reference the actual product in the database
-                        idProducto = GetProductoIdByCodigo(codigoProducto),
-                        precioVenta = precioVenta,
-                        cantidad = cantidad,
-                        subTotal = precioVenta * cantidad
-                    };
-                    detalles.Add(detalle);
                 }
             }
-
-            // Create a new Venta (sale) object
-            var cliente = new Cliente
+        }
+        private void RegistrarDetallesVenta(int idVentaRegistrada)
+        {
+            foreach (DataGridViewRow row in dgvVentas.Rows)
             {
-                documento = txtdocumento.Text,
-                nombreCompleto = txtNombre.Text
-            };
+                if (row.Cells["idProducto"].Value != null)
+                {
+                    // Similar a ValidarDetallesCompra, adapta para ventas
+                    var detalleVenta = new DetalleVenta
+                    {
+                        idVenta = idVentaRegistrada,
+                        idProducto = Convert.ToInt32(row.Cells["idProducto"].Value),
+                        precioVenta = Convert.ToDecimal(row.Cells["precioVenta"].Value),
+                        cantidad = Convert.ToInt32(row.Cells["cantidad"].Value),
+                        subTotal = Convert.ToDecimal(row.Cells["total"].Value),
+                    };
+                    try
+                    {
+                        DetalleVentaCln.RegistrarDetalleVenta(detalleVenta);
+                    }
+                    catch (Exception ex)
+                    {
+                        ManejarErrorRegistro(ex, "Error al registrar detalle de venta");
+                    }
+                }
+            }
+        }
+        private void ManejarErrorRegistro(Exception ex, string mensaje)
+             {
+        MessageBox.Show($"{mensaje}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
-            var venta = new Venta
+        private void btnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            if (dgvVentas.Rows.Count == 0)
             {
-                documentoCliente = cliente.documento,
-                montoTotal = Convert.ToDecimal(txtMontoAPagar.Text),
-                // Add the sale details to the venta object
-                DetalleVenta = detalles
-            };
+                MessageBox.Show("No hay productos para registrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            decimal montoTotal;
+            if (!decimal.TryParse(txtMontoAPagar.Text, out montoTotal))
+            {
+                MessageBox.Show("El monto total a pagar no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            decimal montoPago;
+            if (string.IsNullOrEmpty(txtPagaCon.Text) || !decimal.TryParse(txtPagaCon.Text, out montoPago))
+            {
+                MessageBox.Show("El monto de pago no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (montoPago < montoTotal)
+            {
+                MessageBox.Show("El monto de pago debe ser mayor o igual al total a pagar.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            decimal montoCambio = montoPago - montoTotal;
 
+            var venta = CrearVenta( montoTotal, montoPago, montoCambio);
+
+            if (venta == null)
+            {
+                return;
+            }
             try
             {
-                using (var context = new LabBroasteriaEntities())
-                {
-                    context.Venta.Add(venta);  // Add the sale to the context
-                    context.SaveChanges();     // Commit the transaction to the database
-                }
+                int idVentaRegistrada = VentaCln.RegistrarVenta(venta);
+                RegistrarDetallesVenta(idVentaRegistrada);
+                ActualizarStockVenta();
 
-                MessageBox.Show("Venta registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Venta registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (DbEntityValidationException ex)
             {
-                // Handle validation errors
-                string errorMessage = "Error al registrar la venta: ";
-                foreach (var validationError in ex.EntityValidationErrors)
+                foreach (var eve in ex.EntityValidationErrors)
                 {
-                    foreach (var error in validationError.ValidationErrors)
+                    Console.WriteLine($"Entidad \"{eve.Entry.Entity.GetType().Name}\" en estado \"{eve.Entry.State}\" tiene los siguientes errores de validación:");
+                    foreach (var ve in eve.ValidationErrors)
                     {
-                        errorMessage += $"{error.PropertyName}: {error.ErrorMessage}\n";
+                        Console.WriteLine($"- Propiedad: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
                     }
                 }
-                MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al registrar la venta: verifique los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error inesperado al registrar la venta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ManejarErrorRegistro(ex, "Error al registrar la venta");
             }
+            dgvVentas.Rows.Clear();
+            txtMontoAPagar.Text = "0.00";
+            txtPagaCon.Text = string.Empty;
+            txtCambio.Text = "0.00"; 
+            LimpiarTodo();
+
         }
-        private int GetProductoIdByCodigo(string codigoProducto)
+
+        private Venta CrearVenta(decimal montoTotal, decimal montoPago, decimal montoCambio)
         {
-            using (var context = new LabBroasteriaEntities())
+            string tipoDocumento = "Factura";
+            string numeroDocumento = GenerarNumeroDocumento(); 
+
+            string documentoCliente = txtdocumento.Text;
+            string nombreCliente = txtNombre.Text;
+            string usuarioRegistro = Util.usuario.usuario1 ?? "Usuario Desconocido";
+
+            return new Venta
             {
-                var producto = context.Producto.FirstOrDefault(p => p.codigo == codigoProducto);
-                return producto != null ? producto.id : 0;
-            }
+                tipoDocumento = tipoDocumento,
+                numeroDocumento = numeroDocumento,
+                documentoCliente = documentoCliente,
+                nombreCliente = nombreCliente,
+                montoTotal = montoTotal,
+                montoPago = montoPago,
+                montoCambio = montoCambio,
+                fechaRegistro = DateTime.Now,
+                usuarioRegistro = usuarioRegistro,
+                estado = 1
+            };
+        }
+
+        private string GenerarNumeroDocumento()
+        {
+            return "FACT" + DateTime.Now.Ticks.ToString();
+        }
+        private void LimpiarTodo()
+        {
+            txtCodigoProducto.Text = string.Empty;
+            txtProducto.Text = string.Empty;
+            txtPrecioVenta.Text = string.Empty;
+            nudCantidadVenta.Text = string.Empty;
+            txtdocumento.Text = string.Empty;
+            txtNombre.Text = string.Empty;
         }
     }
 }

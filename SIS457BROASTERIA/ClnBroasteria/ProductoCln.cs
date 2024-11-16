@@ -26,7 +26,7 @@ namespace ClnBroasteria
                 var existente = context.Producto.Find(producto.id);
                 existente.codigo = producto.codigo;
                 existente.nombre = producto.nombre;
-                existente.descripcion = producto.descripcion;  
+                existente.descripcion = producto.descripcion;
                 existente.stock = producto.stock;
                 existente.precioVenta = producto.precioVenta;
                 return context.SaveChanges();
@@ -54,7 +54,7 @@ namespace ClnBroasteria
         {
             using (var context = new LabBroasteriaEntities())
             {
-                return context.Producto.Where(x => x.estado != - 1).ToList(); 
+                return context.Producto.Where(x => x.estado != -1).ToList();
             }
         }
 
@@ -79,5 +79,32 @@ namespace ClnBroasteria
                 return context.paListarProducto(parametro).ToList();
             }
         }
+        public static bool ActualizarDisminuirStock(int idProducto, int cantidad)
+        {
+            using (var context = new LabBroasteriaEntities())
+            {
+                var producto = context.Producto.Find(idProducto);
+                if (producto != null && producto.estado != -1)
+                {
+
+                    if (producto.stock >= cantidad)
+                    {
+                        producto.stock -= cantidad;
+                    }
+                    else
+                    {
+                        throw new Exception("No hay suficiente stock para realizar la venta.");
+                    }
+
+                    context.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    throw new Exception("El producto no existe o está inactivo.");
+                }
+            }
+        }
+     
     }
 }

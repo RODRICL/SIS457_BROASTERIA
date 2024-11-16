@@ -152,7 +152,6 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idUsuario" Type="int" Nullable="false" />
     <Property Name="tipoDocumento" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="numeroDocumento" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="documentoCliente" Type="varchar" MaxLength="50" Nullable="false" />
@@ -284,18 +283,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_Venta_Usuario">
-    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
-    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Venta">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Function Name="paCategoriaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
@@ -366,10 +353,6 @@
     <AssociationSet Name="fk_Usuario_Empleado" Association="Self.fk_Usuario_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Usuario" EntitySet="Usuario" />
-    </AssociationSet>
-    <AssociationSet Name="fk_Venta_Usuario" Association="Self.fk_Venta_Usuario">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Venta" EntitySet="Venta" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
