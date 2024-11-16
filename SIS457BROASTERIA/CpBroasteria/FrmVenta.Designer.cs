@@ -144,7 +144,7 @@
             this.gbxInformacionVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbxInformacionVenta.Name = "gbxInformacionVenta";
             this.gbxInformacionVenta.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxInformacionVenta.Size = new System.Drawing.Size(416, 105);
+            this.gbxInformacionVenta.Size = new System.Drawing.Size(299, 105);
             this.gbxInformacionVenta.TabIndex = 37;
             this.gbxInformacionVenta.TabStop = false;
             this.gbxInformacionVenta.Text = "Información Venta";
@@ -154,7 +154,7 @@
             this.txtFecha.Location = new System.Drawing.Point(16, 57);
             this.txtFecha.Margin = new System.Windows.Forms.Padding(5);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(128, 34);
+            this.txtFecha.Size = new System.Drawing.Size(243, 34);
             this.txtFecha.TabIndex = 3;
             // 
             // lblFecha
@@ -178,11 +178,11 @@
             this.gbxInformacionCliente.Controls.Add(this.txtdocumento);
             this.gbxInformacionCliente.Controls.Add(this.lblCedulaIdentidad);
             this.gbxInformacionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxInformacionCliente.Location = new System.Drawing.Point(460, 127);
+            this.gbxInformacionCliente.Location = new System.Drawing.Point(367, 127);
             this.gbxInformacionCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbxInformacionCliente.Name = "gbxInformacionCliente";
             this.gbxInformacionCliente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxInformacionCliente.Size = new System.Drawing.Size(772, 105);
+            this.gbxInformacionCliente.Size = new System.Drawing.Size(865, 105);
             this.gbxInformacionCliente.TabIndex = 38;
             this.gbxInformacionCliente.TabStop = false;
             this.gbxInformacionCliente.Text = "Información Cliente";
@@ -192,10 +192,10 @@
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(427, 60);
+            this.txtNombre.Location = new System.Drawing.Point(530, 60);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(328, 30);
+            this.txtNombre.Size = new System.Drawing.Size(318, 30);
             this.txtNombre.TabIndex = 50;
             // 
             // btnAgregarCliente
@@ -205,11 +205,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.Location = new System.Drawing.Point(304, 41);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(421, 36);
             this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAgregarCliente.Size = new System.Drawing.Size(97, 62);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(93, 62);
             this.btnAgregarCliente.TabIndex = 49;
             this.btnAgregarCliente.Text = "Crear Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -221,7 +221,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(423, 30);
+            this.lblNombre.Location = new System.Drawing.Point(526, 30);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(91, 24);
             this.lblNombre.TabIndex = 19;
@@ -233,11 +233,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarCliente.Image = global::CpBroasteria.Properties.Resources.search;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(225, 38);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(332, 38);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnBuscarCliente.Size = new System.Drawing.Size(73, 62);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(84, 62);
             this.btnBuscarCliente.TabIndex = 18;
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
@@ -250,7 +250,7 @@
             this.txtdocumento.Location = new System.Drawing.Point(11, 60);
             this.txtdocumento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(196, 30);
+            this.txtdocumento.Size = new System.Drawing.Size(293, 30);
             this.txtdocumento.TabIndex = 2;
             // 
             // lblCedulaIdentidad

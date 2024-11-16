@@ -21,5 +21,10 @@ namespace CpBroasteria
 		{
 			Close();
 		}
-	}
+
+        private void FrmEmpleado_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

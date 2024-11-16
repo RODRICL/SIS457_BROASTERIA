@@ -1,14 +1,8 @@
 ﻿using CadBroasteria;
 using ClnBroasteria;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity.Validation;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CpBroasteria
@@ -16,10 +10,12 @@ namespace CpBroasteria
     public partial class FrmVenta : Form
     {
         private string idProductoSeleccionado;
+
         public FrmVenta()
         {
             InitializeComponent();
         }
+
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             string documento = txtdocumento.Text;
@@ -45,6 +41,7 @@ namespace CpBroasteria
                 }
             }
         }
+
         public void SetListaCliente(string documento, string nombreCompleto)
         {
             txtdocumento.Text = documento;
@@ -56,20 +53,22 @@ namespace CpBroasteria
             var frmCliente = new FrmCliente(this);
             frmCliente.ShowDialog();
         }
+
         private void limpiarDocumento()
         {
             txtdocumento.Text = string.Empty;
         }
+
         private void FrmVenta_Load(object sender, EventArgs e)
         {
             txtdocumento.KeyPress += Util.onlyNumbers;
             var colIdProducto = new DataGridViewTextBoxColumn
             {
                 Name = "idProducto",
-                Visible = false //para que oculte la columna idPro
+                Visible = false
             };
             dgvVentas.Columns.Add(colIdProducto);
-
+            txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
             dgvVentas.Columns.Add("Codigo", "Código");
             dgvVentas.Columns.Add("Nombre", "Nombre");
             dgvVentas.Columns.Add("Descripcion", "Descripcion");
@@ -84,7 +83,8 @@ namespace CpBroasteria
             FrmListarProducto productoFrm = new FrmListarProducto(this);
             productoFrm.ShowDialog();
         }
-        public void SetListaProducto(string idProducto,string codigo, string nombre, string descripcion, string stock, string precioVenta)
+
+        public void SetListaProducto(string idProducto, string codigo, string nombre, string descripcion, string stock, string precioVenta)
         {
             idProductoSeleccionado = idProducto;
             txtCodigoProducto.Text = codigo;
@@ -110,15 +110,13 @@ namespace CpBroasteria
             erpCantidadVender.SetError(nudCantidadVenta, "");
             erpPagaCon.SetError(txtPagaCon, "");
 
-            // Validación del documento del cliente
             if (string.IsNullOrEmpty(txtdocumento.Text))
             {
                 esValido = false;
                 erpDocumentoCliente.SetError(txtdocumento, "Este campo no debe estar vacío");
             }
 
-            // Validación de productos
-            if (!RegistroVenta) // Solo valida cuando no es el registro de la venta
+            if (!RegistroVenta)
             {
                 if (string.IsNullOrEmpty(txtCodigoProducto.Text))
                 {
@@ -182,7 +180,6 @@ namespace CpBroasteria
             txtMontoAPagar.Text = totalPagar.ToString("0.00");
         }
 
-
         private void btnQuitar_Click(object sender, EventArgs e)
         {
             if (dgvVentas.SelectedRows.Count > 0)
@@ -233,7 +230,6 @@ namespace CpBroasteria
 
                     try
                     {
-                        // Llama al método ActualizarStock para reducir el stock
                         bool actualizado = ProductoCln.ActualizarDisminuirStock(idProducto, cantidad);
 
                         if (!actualizado)
@@ -248,13 +244,13 @@ namespace CpBroasteria
                 }
             }
         }
+
         private void RegistrarDetallesVenta(int idVentaRegistrada)
         {
             foreach (DataGridViewRow row in dgvVentas.Rows)
             {
                 if (row.Cells["idProducto"].Value != null)
                 {
-                    // Similar a ValidarDetallesCompra, adapta para ventas
                     var detalleVenta = new DetalleVenta
                     {
                         idVenta = idVentaRegistrada,
@@ -263,6 +259,7 @@ namespace CpBroasteria
                         cantidad = Convert.ToInt32(row.Cells["cantidad"].Value),
                         subTotal = Convert.ToDecimal(row.Cells["total"].Value),
                     };
+
                     try
                     {
                         DetalleVentaCln.RegistrarDetalleVenta(detalleVenta);
@@ -270,83 +267,18 @@ namespace CpBroasteria
                     catch (Exception ex)
                     {
                         ManejarErrorRegistro(ex, "Error al registrar detalle de venta");
+                        return;
                     }
                 }
             }
         }
-        private void ManejarErrorRegistro(Exception ex, string mensaje)
-             {
-        MessageBox.Show($"{mensaje}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
 
-        private void btnRegistrarVenta_Click(object sender, EventArgs e)
-        {
-            if (dgvVentas.Rows.Count == 0)
-            {
-                MessageBox.Show("No hay productos para registrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            decimal montoTotal;
-            if (!decimal.TryParse(txtMontoAPagar.Text, out montoTotal))
-            {
-                MessageBox.Show("El monto total a pagar no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            decimal montoPago;
-            if (string.IsNullOrEmpty(txtPagaCon.Text) || !decimal.TryParse(txtPagaCon.Text, out montoPago))
-            {
-                MessageBox.Show("El monto de pago no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (montoPago < montoTotal)
-            {
-                MessageBox.Show("El monto de pago debe ser mayor o igual al total a pagar.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            decimal montoCambio = montoPago - montoTotal;
 
-            var venta = CrearVenta( montoTotal, montoPago, montoCambio);
-
-            if (venta == null)
-            {
-                return;
-            }
-            try
-            {
-                int idVentaRegistrada = VentaCln.RegistrarVenta(venta);
-                RegistrarDetallesVenta(idVentaRegistrada);
-                ActualizarStockVenta();
-
-                MessageBox.Show("Venta registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (DbEntityValidationException ex)
-            {
-                foreach (var eve in ex.EntityValidationErrors)
-                {
-                    Console.WriteLine($"Entidad \"{eve.Entry.Entity.GetType().Name}\" en estado \"{eve.Entry.State}\" tiene los siguientes errores de validación:");
-                    foreach (var ve in eve.ValidationErrors)
-                    {
-                        Console.WriteLine($"- Propiedad: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
-                    }
-                }
-                MessageBox.Show("Error al registrar la venta: verifique los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                ManejarErrorRegistro(ex, "Error al registrar la venta");
-            }
-            dgvVentas.Rows.Clear();
-            txtMontoAPagar.Text = "0.00";
-            txtPagaCon.Text = string.Empty;
-            txtCambio.Text = "0.00"; 
-            LimpiarTodo();
-
-        }
 
         private Venta CrearVenta(decimal montoTotal, decimal montoPago, decimal montoCambio)
         {
             string tipoDocumento = "Factura";
-            string numeroDocumento = GenerarNumeroDocumento(); 
+            string numeroDocumento = GenerarNumeroDocumento();
 
             string documentoCliente = txtdocumento.Text;
             string nombreCliente = txtNombre.Text;
@@ -371,6 +303,7 @@ namespace CpBroasteria
         {
             return "FACT" + DateTime.Now.Ticks.ToString();
         }
+
         private void LimpiarTodo()
         {
             txtCodigoProducto.Text = string.Empty;
@@ -379,6 +312,79 @@ namespace CpBroasteria
             nudCantidadVenta.Text = string.Empty;
             txtdocumento.Text = string.Empty;
             txtNombre.Text = string.Empty;
+        }
+
+        private void btnRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            {
+                if (dgvVentas.Rows.Count == 0)
+                {
+                    MessageBox.Show("No hay productos para registrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                decimal montoTotal;
+                if (!decimal.TryParse(txtMontoAPagar.Text, out montoTotal))
+                {
+                    MessageBox.Show("El monto total a pagar no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                decimal montoPago;
+                if (string.IsNullOrEmpty(txtPagaCon.Text) || !decimal.TryParse(txtPagaCon.Text, out montoPago))
+                {
+                    MessageBox.Show("El monto de pago no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (montoPago < montoTotal)
+                {
+                    MessageBox.Show("El monto de pago debe ser mayor o igual al total a pagar.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                decimal montoCambio = montoPago - montoTotal;
+
+                var venta = CrearVenta(montoTotal, montoPago, montoCambio);
+                if (venta == null)
+                {
+                    return;
+                }
+
+                try
+                {
+                    int idVentaRegistrada = VentaCln.RegistrarVenta(venta);
+                    RegistrarDetallesVenta(idVentaRegistrada);
+                    ActualizarStockVenta();
+
+                    MessageBox.Show("Venta registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Console.WriteLine($"Entidad \"{eve.Entry.Entity.GetType().Name}\" en estado \"{eve.Entry.State}\" tiene los siguientes errores de validación:");
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Console.WriteLine($"- Propiedad: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
+                        }
+                    }
+                    MessageBox.Show("Error al registrar la venta: verifique los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    ManejarErrorRegistro(ex, "Error al registrar la venta");
+                }
+                dgvVentas.Rows.Clear();
+                txtMontoAPagar.Text = "0.00";
+                txtPagaCon.Text = string.Empty;
+                txtCambio.Text = "0.00";
+                LimpiarTodo();
+            }
+        }
+        private void ManejarErrorRegistro(Exception ex, string mensaje)
+        {
+            MessageBox.Show($"{mensaje}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -22,3 +22,15 @@ C:\INFO\DESARROLLO CODIGO\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\D
 C:\INFO\DESARROLLO CODIGO\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroas.C58AA137.Up2Date
 C:\INFO\DESARROLLO CODIGO\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroasteria.dll
 C:\INFO\DESARROLLO CODIGO\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroasteria.pdb
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\CadBroasteria.dll.config
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\CadBroasteria.dll
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\CadBroasteria.pdb
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\EntityFramework.dll
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\EntityFramework.xml
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroasteria.csproj.AssemblyReference.cache
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroasteria.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroas.C58AA137.Up2Date
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroasteria.dll
+C:\Users\Hp\Documents\BROASTERIA 457\SIS457_BROASTERIA\SIS457BROASTERIA\CadBroasteria\obj\Debug\CadBroasteria.pdb
