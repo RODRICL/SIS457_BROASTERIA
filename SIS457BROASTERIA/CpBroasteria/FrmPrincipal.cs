@@ -50,5 +50,10 @@ namespace CpBroasteria
         {
             new FrmProveedores().ShowDialog();
         }
-    }
+
+		private void btnCaEmpleados_Click(object sender, EventArgs e)
+		{
+            new FrmEmpleado().ShowDialog();
+		}
+	}
 }
