@@ -278,38 +278,13 @@ VALUES(1, 'gironda', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 GO
 
-CREATE PROC paProductooListar @parametro VARCHAR(100)
-  AS BEGIN 
-  SET NOCOUNT ON;
-  SELECT
-        pr.id ,
-        pr.codigo,
-        pr.nombre,
-        c.descripcion AS Categoria,
-        pr.descripcion AS Descripcion,
-        pr.stock,
-        pr.precioVenta,
-        pr.usuarioRegistro,
-        pr.fechaRegistro,
-        pr.estado
-      
-  FROM Producto pr JOIN Categoria c ON pr.idCategoria = c.id
-  WHERE
-  pr.estado <> -1 AND (
-         pr.nombre LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' OR
-         pr.codigo LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' OR
-         c.descripcion LIKE '%' + REPLACE(@parametro, ' ', '%') + '%' 
-   )
-END
-GO
-select * from producto
 
 --LISTAR CLIENTE VENTA
  CREATE PROC paListarCliente @parametro VARCHAR(100)    
   AS SELECT cl.id, cl.documento, cl.nombreCompleto FROM Cliente cl
   WHERE estado <> -1 AND cl.nombreCompleto LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
   ORDER BY cl.nombreCompleto;
-
+GO
 
   --LISTAR PRODUCTO VENTA
    CREATE PROC paListarProducto @parametro VARCHAR(100)    
@@ -342,8 +317,8 @@ ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
 BEGIN
     SELECT 
-        p.*,                -- Todas las columnas de la tabla Producto
-        c.descripcion AS categoriaDescripcion -- Descripción de la categoría
+        p.*,          
+        c.descripcion AS categoriaDescripcion 
     FROM 
         Producto p
     LEFT JOIN 

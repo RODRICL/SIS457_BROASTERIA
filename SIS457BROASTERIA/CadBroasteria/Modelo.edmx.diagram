@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d5c04aa5f2cb45f98c277a0ba0593b52" Name="Diagram1">
-        <EntityTypeShape EntityType="LabBroasteriaModel.Categoria" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Cliente" Width="1.5" PointX="8.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Compra" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.DetalleCompra" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.DetalleVenta" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Empleado" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.HistorialCompra" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.HistorialVenta" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Producto" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Proveedor" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Usuario" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabBroasteriaModel.Venta" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Categoria" Width="1.5" PointX="0.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Cliente" Width="1.5" PointX="10.125" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Compra" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.DetalleCompra" Width="1.5" PointX="5.375" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.DetalleVenta" Width="1.5" PointX="10.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Empleado" Width="1.5" PointX="4.125" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.HistorialCompra" Width="1.5" PointX="6.875" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.HistorialVenta" Width="1.5" PointX="0.625" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Producto" Width="1.5" PointX="2.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Proveedor" Width="1.5" PointX="1.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Usuario" Width="1.5" PointX="8.125" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabBroasteriaModel.Venta" Width="1.5" PointX="7.125" PointY="0.5" IsExpanded="true" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Compra_Proveedor" ManuallyRouted="false" />
         <AssociationConnector Association="LabBroasteriaModel.fk_Compra_Usuario" ManuallyRouted="false" />
