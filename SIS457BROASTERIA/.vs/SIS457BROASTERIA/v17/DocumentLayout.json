@@ -1,46 +1,48 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\",
+  "WorkspaceRootPath": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|c:\\users\\hp\\documents\\broasteria 457\\sis457_broasteria\\sis457broasteria\\cadbroasteria\\modelo.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|solutionrelative:cadbroasteria\\modelo.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|CpBroasteria||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cadbroasteria\\modelo.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{ADE19D78-2288-4F1D-8097-8CA4C1B3AAB6}|CadBroasteria\\CadBroasteria.csproj|solutionrelative:cadbroasteria\\modelo.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\cpbroasteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|solutionrelative:cpbroasteria\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE4F665-3056-4285-B5DA-B44D7B1F614F}|CpBroasteria\\CpBroasteria.csproj|c:\\info\\desarrollo codigo\\sis457_broasteria\\sis457broasteria\\cpbroasteria\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,134 +52,105 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Modelo.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CadBroasteria\\Modelo.edmx",
-              "RelativeDocumentMoniker": "CadBroasteria\\Modelo.edmx",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CadBroasteria\\Modelo.edmx [Diagram1]",
-              "RelativeToolTip": "CadBroasteria\\Modelo.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-11-16T08:11:18.151Z",
-              "EditorCaption": " [Diagram1]"
+              "Title": "CpBroasteria",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\CpBroasteria.csproj",
+              "RelativeDocumentMoniker": "CpBroasteria\\CpBroasteria.csproj",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\CpBroasteria.csproj",
+              "RelativeToolTip": "CpBroasteria\\CpBroasteria.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-16T12:10:33.131Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "FrmVenta.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmVenta.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs",
               "RelativeToolTip": "CpBroasteria\\FrmVenta.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAqwDQAAAAMAAAA",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwDQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T07:09:50.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "FrmVenta.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmVenta.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmVenta.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpBroasteria\\FrmVenta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T06:02:51.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "FrmProducto.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProducto.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProducto.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmProducto.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProducto.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProducto.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpBroasteria\\FrmProducto.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T05:54:02.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "FrmProveedores.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProveedores.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProveedores.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmProveedores.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProveedores.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmProveedores.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpBroasteria\\FrmProveedores.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T05:53:53.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmEmpleado.cs",
-              "RelativeDocumentMoniker": "CpBroasteria\\FrmEmpleado.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmEmpleado.cs",
-              "RelativeToolTip": "CpBroasteria\\FrmEmpleado.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAArwBoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T05:02:42.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "FrmAutenticacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmAutenticacion.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmAutenticacion.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpBroasteria\\FrmAutenticacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T04:59:54.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FrmEmpleado.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmEmpleado.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmEmpleado.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmEmpleado.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmEmpleado.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmEmpleado.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpBroasteria\\FrmEmpleado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T04:38:38.352Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Modelo.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CadBroasteria\\Modelo.edmx",
+              "RelativeDocumentMoniker": "CadBroasteria\\Modelo.edmx",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CadBroasteria\\Modelo.edmx [Diagram1]",
+              "RelativeToolTip": "CadBroasteria\\Modelo.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-11-16T08:11:18.151Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs",
+              "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs",
               "RelativeToolTip": "CpBroasteria\\FrmPrincipal.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAqwDcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -187,10 +160,10 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "FrmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "CpBroasteria\\FrmPrincipal.cs",
               "ToolTip": "C:\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\INFO\\DESARROLLO CODIGO\\SIS457_BROASTERIA\\SIS457BROASTERIA\\CpBroasteria\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpBroasteria\\FrmPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T22:48:49.846Z"
             }
