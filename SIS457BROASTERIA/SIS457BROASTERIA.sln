@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClnBroasteria", "ClnBroaste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpBroasteria", "CpBroasteria\CpBroasteria.csproj", "{FBE4F665-3056-4285-B5DA-B44D7B1F614F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBroasteria", "WebBroasteria\WebBroasteria.csproj", "{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FBE4F665-3056-4285-B5DA-B44D7B1F614F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBE4F665-3056-4285-B5DA-B44D7B1F614F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBE4F665-3056-4285-B5DA-B44D7B1F614F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
