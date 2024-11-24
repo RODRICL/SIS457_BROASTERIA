@@ -21,7 +21,10 @@ namespace WebBroasteria.Controllers
         // GET: Productos
         public async Task<IActionResult> Index()
         {
-            var labBroasteriaContext = _context.Productos.Include(p => p.IdCategoriaNavigation);
+            var labBroasteriaContext = _context.Productos
+                .Include(p => p.IdCategoriaNavigation)
+                .Where(p => p.Estado != -1); // Filtrar productos con estado diferente de -1
+
             return View(await labBroasteriaContext.ToListAsync());
         }
 
@@ -47,7 +50,13 @@ namespace WebBroasteria.Controllers
         // GET: Productos/Create
         public IActionResult Create()
         {
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id");
+            // Filtrar categorías con estado diferente a -1
+            ViewBag.IdCategoria = new SelectList(
+                _context.Categoria.Where(c => c.Estado != -1), // Filtramos las categorías con estado diferente a -1
+                "Id",          // Valor que se almacena en el modelo (Id de la categoría)
+                "Descripcion"  // Texto visible para el usuario (Descripción de la categoría)
+            );
+
             return View();
         }
 
@@ -56,15 +65,26 @@ namespace WebBroasteria.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Stock,PrecioVenta,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
+        public async Task<IActionResult> Create([Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Stock,PrecioVenta")] Producto producto)
         {
-            if (ModelState.IsValid)
+            if (!string.IsNullOrEmpty(producto.Codigo) && !string.IsNullOrEmpty(producto.Nombre) && !string.IsNullOrEmpty(producto.Descripcion))
             {
+                producto.UsuarioRegistro = "SIS457";
+                producto.FechaRegistro = DateTime.Now;
+                producto.Estado = 1;
+
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", producto.IdCategoria);
+
+            // Usamos ViewBag en vez de ViewData
+            ViewBag.IdCategoria = new SelectList(
+                _context.Categoria.Where(c => c.Estado != -1), // Excluimos las categorías con estado -1
+                "Id",          // Valor de la opción (Id de la categoría que se almacenará en el modelo)
+                "Descripcion"  // Texto que se mostrará en la opción (Descripcion de la categoría)
+            );
+
             return View(producto);
         }
 

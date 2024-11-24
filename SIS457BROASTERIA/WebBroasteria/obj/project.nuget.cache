@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AgdTDVjxelVgf9PDf/sZfJcIRQFbloVxgsFi/tS+R534JlMs75VhzbE1qJ09eHLCKRZdvaMy1mJF+rOZKUlX9g==",
+  "dgSpecHash": "PpuIOMdpGmkjtxP58jpdbbguVaMG1qKSa7PGESCX1INyjt79lDbE+R1Rj424VLXfg4eX9f8EoN8zNRpJUhjcgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hp\\Documents\\BROASTERIA 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj",
+  "projectFilePath": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hp\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Hp\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
