@@ -53,7 +53,7 @@ namespace WebBroasteria.Controllers
                 var authProperties = new AuthenticationProperties
                 {
                     AllowRefresh = true,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(1),
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(5),
                     IsPersistent = model.recordarme
                 };
                 await HttpContext.SignInAsync(
