@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebBroasteria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38a9a77d4bd12c6d33a27c79070d6f7a0b185c96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41c8f7c5ab7b05eeb744ff4c04a21bc723f247fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebBroasteria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebBroasteria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
