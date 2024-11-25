@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using WebBroasteria.Models;
 
 namespace WebBroasteria.Controllers
 {
+    [Authorize]
     public class ProductosController : Controller
     {
         private readonly LabBroasteriaContext _context;
@@ -66,7 +68,7 @@ namespace WebBroasteria.Controllers
         {
             if (!string.IsNullOrEmpty(producto.Codigo) && !string.IsNullOrEmpty(producto.Nombre) && !string.IsNullOrEmpty(producto.Descripcion))
             {
-                producto.UsuarioRegistro = "SIS457";
+                producto.UsuarioRegistro = User.Identity.Name;
                 producto.FechaRegistro = DateTime.Now;
                 producto.Estado = 1;
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using WebBroasteria.Models;
 
 namespace WebBroasteria.Controllers
 {
+    [Authorize]
     public class ClientesController : Controller
     {
         private readonly LabBroasteriaContext _context;
@@ -57,7 +59,7 @@ namespace WebBroasteria.Controllers
         {
             if (!string.IsNullOrEmpty(cliente.Documento) && !string.IsNullOrEmpty(cliente.NombreCompleto) && !string.IsNullOrEmpty(cliente.Email) && !string.IsNullOrEmpty(cliente.Telefono))
             {
-                cliente.UsuarioRegistro = "SIS457";
+                cliente.UsuarioRegistro = User.Identity.Name;
                 cliente.FechaRegistro = DateTime.Now;
                 cliente.Estado = 1;
 

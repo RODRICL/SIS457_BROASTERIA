@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using WebBroasteria.Models;
 
 namespace WebBroasteria.Controllers
 {
+    [Authorize]
     public class CategoriaController : Controller
     {
         private readonly LabBroasteriaContext _context;
@@ -61,7 +63,7 @@ namespace WebBroasteria.Controllers
         {
             if (!string.IsNullOrEmpty(categorium.Descripcion))
             {
-                categorium.UsuarioRegistro = "SIS457";
+                categorium.UsuarioRegistro = User.Identity.Name;
                 categorium.FechaRegistro = DateTime.Now;
                 categorium.Estado = 1;
                 _context.Add(categorium);

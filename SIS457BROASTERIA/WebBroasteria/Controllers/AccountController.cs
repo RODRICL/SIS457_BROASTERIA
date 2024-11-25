@@ -79,8 +79,7 @@ namespace WebBroasteria.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
-        public static Usuario usuario;
-        public static bool notPaste = true;
+
         public static string Encrypt(string clearText)
         {
             string EncryptionKey = "SIS457-1nf0!";
