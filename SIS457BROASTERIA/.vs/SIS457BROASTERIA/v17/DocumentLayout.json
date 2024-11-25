@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\categoria\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\categoria\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\webbroasteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,22 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Productos\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Productos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Productos\\Index.cshtml",
-              "RelativeToolTip": "WebBroasteria\\Views\\Productos\\Index.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAcwCcAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T04:56:08.328Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -88,93 +74,127 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Categoria\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Create.cshtml",
-              "RelativeToolTip": "WebBroasteria\\Views\\Categoria\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Clientes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Details.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Clientes\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T06:18:28.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Categoria\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Index.cshtml",
-              "RelativeToolTip": "WebBroasteria\\Views\\Categoria\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T06:09:16.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\CategoriaController.cs",
-              "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\CategoriaController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\CategoriaController.cs",
-              "RelativeToolTip": "WebBroasteria\\Controllers\\CategoriaController.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAqwDsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T06:05:57.988Z",
+              "WhenOpened": "2024-11-25T00:47:08.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Productos\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Productos\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Productos\\Create.cshtml",
-              "RelativeToolTip": "WebBroasteria\\Views\\Productos\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Clientes\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Delete.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Clientes\\Delete.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T05:33:34.541Z",
+              "WhenOpened": "2024-11-25T00:43:09.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Categoria\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Edit.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Categoria\\Edit.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T00:37:57.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Clientes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Edit.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Clientes\\Edit.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T00:36:04.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebBroasteria\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABuAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Clientes\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-24T04:52:05.989Z",
+              "WhenOpened": "2024-11-25T00:18:55.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "WebBroasteria\\Controllers\\ProductosController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwDIAAAAlAAAA",
+              "DocumentIndex": 3,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "WebBroasteria\\Controllers\\ClientesController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAgwHYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T04:46:13.069Z",
+              "WhenOpened": "2024-11-25T00:14:28.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Program.cs",
-              "RelativeDocumentMoniker": "WebBroasteria\\Program.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Program.cs",
-              "RelativeToolTip": "WebBroasteria\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Productos\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Productos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Productos\\Create.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Productos\\Create.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T00:21:10.671Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "d3f0a08a-f165-4c4d-b208-d75297e7018d",
+        "Display": 1,
+        "X": -218,
+        "Y": 122,
+        "Width": 1522,
+        "Height": 717,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "WebBroasteria\\Controllers\\ProductosController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T04:38:30.109Z",
+              "WhenOpened": "2024-11-25T00:14:25.486Z",
               "EditorCaption": ""
             }
           ]

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -61,8 +60,6 @@ namespace WebBroasteria.Controllers
         }
 
         // POST: Productos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Stock,PrecioVenta")] Producto producto)
@@ -89,57 +86,60 @@ namespace WebBroasteria.Controllers
         }
 
         // GET: Productos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+    public async Task<IActionResult> Edit(int? id)
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
+
+    var producto = await _context.Productos.FindAsync(id);
+    if (producto == null)
+    {
+        return NotFound();
+    }
+
+    // Se muestra la descripción de la categoría, no solo el Id
+    ViewData["IdCategoria"] = new SelectList(_context.Categoria.Where(c => c.Estado != -1), "Id", "Descripcion", producto.IdCategoria);
+    return View(producto);
+}
+
+// POST: Productos/Edit/5
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Edit(int id, [Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Stock,PrecioVenta,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
+{
+    if (id != producto.Id)
+    {
+        return NotFound();
+    }
+
+    // Comprobar si el modelo es válido antes de proceder
+    if (ModelState.IsValid)
+    {
+        try
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var producto = await _context.Productos.FindAsync(id);
-            if (producto == null)
-            {
-                return NotFound();
-            }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", producto.IdCategoria);
-            return View(producto);
+            _context.Update(producto);  // Actualiza el producto
+            await _context.SaveChangesAsync();  // Guarda los cambios en la base de datos
+            return RedirectToAction(nameof(Index));  // Redirige al Index con los datos actualizados
         }
-
-        // POST: Productos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Stock,PrecioVenta,UsuarioRegistro,FechaRegistro,Estado")] Producto producto)
+        catch (DbUpdateConcurrencyException)
         {
-            if (id != producto.Id)
+            if (!ProductoExists(producto.Id))
             {
-                return NotFound();
+                return NotFound();  // Si no existe el producto, muestra un error
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                try
-                {
-                    _context.Update(producto);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductoExists(producto.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                throw;  // Lanza la excepción si hay un problema con la actualización
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", producto.IdCategoria);
-            return View(producto);
         }
+    }
+    
+    // Si hay un error de validación, se vuelve a cargar la vista de edición
+    ViewData["IdCategoria"] = new SelectList(_context.Categoria.Where(c => c.Estado != -1), "Id", "Descripcion", producto.IdCategoria);
+    return View(producto);  // Retorna a la vista Edit con los datos que no pasaron la validación
+}
 
         // GET: Productos/Delete/5
         public async Task<IActionResult> Delete(int? id)
