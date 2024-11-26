@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\",
+  "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\webbroasteria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\desktop\\sis457_broasteria\\sis457broasteria\\webbroasteria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\webbroasteria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,62 +55,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "WebBroasteria\\Models\\Producto.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Models\\Producto.cs",
+              "RelativeToolTip": "WebBroasteria\\Models\\Producto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:34:25.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\AccountController.cs",
               "RelativeToolTip": "WebBroasteria\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwDcAAABFAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAA1wDcAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:31:39.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
               "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ProductosController.cs",
               "RelativeToolTip": "WebBroasteria\\Controllers\\ProductosController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:57:50.126Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "9d2023b9-8ff8-4f8a-b400-2435ef7aa7c8",
-        "Display": 1,
-        "X": -213,
-        "Y": 181,
-        "Width": 1522,
-        "Height": 703,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClientesController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ClientesController.cs",
-              "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\ClientesController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ClientesController.cs",
-              "RelativeToolTip": "WebBroasteria\\Controllers\\ClientesController.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAowFoAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:05:01.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T22:57:50.126Z"
             }
           ]
         }
