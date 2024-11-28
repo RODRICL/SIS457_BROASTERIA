@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\views\\categoria\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|c:\\users\\hp\\documents\\universidad\\4to semestre\\laboratorio 457\\sis457_broasteria\\sis457broasteria\\webbroasteria\\models\\categorium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A3C7848-F700-4CB7-9369-35D8E63D0BB2}|WebBroasteria\\WebBroasteria.csproj|solutionrelative:webbroasteria\\models\\categorium.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,26 +58,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebBroasteria\\Views\\Categoria\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Views\\Categoria\\Create.cshtml",
+              "RelativeToolTip": "WebBroasteria\\Views\\Categoria\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-28T19:04:27.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Categorium.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Models\\Categorium.cs",
+              "RelativeDocumentMoniker": "WebBroasteria\\Models\\Categorium.cs",
+              "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Models\\Categorium.cs",
+              "RelativeToolTip": "WebBroasteria\\Models\\Categorium.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T19:00:51.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CategoriaController.cs",
               "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\CategoriaController.cs",
               "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\CategoriaController.cs",
               "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\CategoriaController.cs",
               "RelativeToolTip": "WebBroasteria\\Controllers\\CategoriaController.cs",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAhwH4AAAAAAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAkwEQAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T04:08:37.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ClientesController.cs",
               "DocumentMoniker": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ClientesController.cs",
               "RelativeDocumentMoniker": "WebBroasteria\\Controllers\\ClientesController.cs",
               "ToolTip": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "WebBroasteria\\Controllers\\ClientesController.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAswH0AAAAhAAAA",
+              "ViewState": "AQIAAGIAAAAAAAAAAAA9wH0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T04:03:13.326Z",
               "EditorCaption": ""

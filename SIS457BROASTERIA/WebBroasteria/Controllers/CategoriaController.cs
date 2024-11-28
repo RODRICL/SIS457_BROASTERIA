@@ -61,16 +61,28 @@ namespace WebBroasteria.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Descripcion,UsuarioRegistro,FechaRegistro")] Categorium categorium)
         {
-
             if (!string.IsNullOrEmpty(categorium.Descripcion))
             {
+                // Verifica si ya existe una categoría con la misma descripción
+                bool exists = _context.Categoria.Any(c => c.Descripcion == categorium.Descripcion);
+
+                if (exists)
+                {
+                    ModelState.AddModelError("Descripcion", "Ya existe una categoría con esta descripción.");
+                    return View(categorium);
+                }
+
+                // Si no existe, crea la categoría
                 categorium.UsuarioRegistro = User.Identity.Name;
                 categorium.FechaRegistro = DateTime.Now;
                 categorium.Estado = 1;
+
                 _context.Add(categorium);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(categorium);
         }
 
