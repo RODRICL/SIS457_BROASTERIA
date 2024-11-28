@@ -17,111 +17,151 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebBroasteria
 build_property.RootNamespace = WebBroasteria
-build_property.ProjectDir = C:\Users\Hp\Desktop\SIS457_BROASTERIA\SIS457BROASTERIA\WebBroasteria\
+build_property.ProjectDir = C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\WebBroasteria\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Hp\Desktop\SIS457_BROASTERIA\SIS457BROASTERIA\WebBroasteria
+build_property.MSBuildProjectDirectory = C:\Users\Hp\Documents\UNIVERSIDAD\4to semestre\LABORATORIO 457\SIS457_BROASTERIA\SIS457BROASTERIA\WebBroasteria
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Account/Login.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Create.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Delete.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Details.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Edit.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Index.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Categoria/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Create.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Delete.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Details.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Edit.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Index.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Home/Index.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/DetalleVenta/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZVZlbnRhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/DetalleVenta/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZVZlbnRhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/DetalleVenta/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZVZlbnRhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/DetalleVenta/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZVZlbnRhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/DetalleVenta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWxsZVZlbnRhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Home/Privacy.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Home/Prueba.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Home/Prueba.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcnVlYmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Create.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Delete.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Details.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Edit.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Index.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/Error.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/_LogoutPartial.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/_LogoutPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dvdXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/_ViewImports.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Venta/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Venta/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Venta/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Venta/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Venta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/_ViewStart.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Hp/Desktop/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/_Layout.cshtml]
+[C:/Users/Hp/Documents/UNIVERSIDAD/4to semestre/LABORATORIO 457/SIS457_BROASTERIA/SIS457BROASTERIA/WebBroasteria/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7g3gnto74n

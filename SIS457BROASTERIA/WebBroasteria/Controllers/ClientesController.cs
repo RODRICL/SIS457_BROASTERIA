@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebBroasteria.Models;
 
@@ -34,8 +32,7 @@ namespace WebBroasteria.Controllers
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var cliente = await _context.Clientes.FirstOrDefaultAsync(m => m.Id == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -51,12 +48,22 @@ namespace WebBroasteria.Controllers
         }
 
         // POST: Clientes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Documento,NombreCompleto,Email,Telefono")] Cliente cliente)
         {
+            // Validar si el documento ya existe
+            if (_context.Clientes.Any(x => x.Documento == cliente.Documento))
+            {
+                ModelState.AddModelError("Documento", "El documento ya existe.");
+            }
+
+            // Validar si el nombre completo ya existe
+            if (_context.Clientes.Any(x => x.NombreCompleto == cliente.NombreCompleto))
+            {
+                ModelState.AddModelError("NombreCompleto", "El nombre completo ya existe.");
+            }
+
             if (!string.IsNullOrEmpty(cliente.Documento) && !string.IsNullOrEmpty(cliente.NombreCompleto) && !string.IsNullOrEmpty(cliente.Email) && !string.IsNullOrEmpty(cliente.Telefono))
             {
                 cliente.UsuarioRegistro = User.Identity.Name;
@@ -87,8 +94,6 @@ namespace WebBroasteria.Controllers
         }
 
         // POST: Clientes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Documento,NombreCompleto,Email,Telefono,UsuarioRegistro,FechaRegistro,Estado")] Cliente cliente)
@@ -129,8 +134,7 @@ namespace WebBroasteria.Controllers
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var cliente = await _context.Clientes.FirstOrDefaultAsync(m => m.Id == id);
             if (cliente == null)
             {
                 return NotFound();

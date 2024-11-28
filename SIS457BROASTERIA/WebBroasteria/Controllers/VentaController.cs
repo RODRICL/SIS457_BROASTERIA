@@ -5,32 +5,32 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using WebBroasteria.Models;
 
 namespace WebBroasteria.Controllers
 {
     [Authorize]
-    public class CategoriaController : Controller
+    public class VentaController : Controller
     {
         private readonly LabBroasteriaContext _context;
 
-        public CategoriaController(LabBroasteriaContext context)
+        public VentaController(LabBroasteriaContext context)
         {
             _context = context;
         }
 
-        // GET: Categoria
+        // GET: Venta
         public async Task<IActionResult> Index()
         {
-            var categorias = await _context.Categoria
-                .Where(c => c.Estado != -1) // Filtro por Estado
-                .ToListAsync();
+            var labBroasteriaContext = _context.Venta
+               .Where(v => v.Estado != -1);
 
-            return View(categorias);
+            return View(await _context.Venta.ToListAsync());
         }
 
-        // GET: Categoria/Details/5
+        // GET: Venta/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,43 +38,43 @@ namespace WebBroasteria.Controllers
                 return NotFound();
             }
 
-            var categorium = await _context.Categoria
+            var ventum = await _context.Venta
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (categorium == null)
+            if (ventum == null)
             {
                 return NotFound();
             }
 
-            return View(categorium);
+            return View(ventum);
         }
 
-        // GET: Categoria/Create
+        // GET: Venta/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Categoria/Create
+        // POST: Venta/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Descripcion,UsuarioRegistro,FechaRegistro")] Categorium categorium)
+        public async Task<IActionResult> Create([Bind("Id,TipoDocumento,NumeroDocumento,DocumentoCliente,NombreCliente,MontoPago,MontoCambio,MontoTotal")] Ventum ventum)
         {
-
-            if (!string.IsNullOrEmpty(categorium.Descripcion))
+            if (ModelState.IsValid)
             {
-                categorium.UsuarioRegistro = User.Identity.Name;
-                categorium.FechaRegistro = DateTime.Now;
-                categorium.Estado = 1;
-                _context.Add(categorium);
+                ventum.UsuarioRegistro = User.Identity.Name;
+                ventum.FechaRegistro = DateTime.Now;
+                ventum.Estado = 1;
+
+                _context.Add(ventum);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(categorium);
+            return View(ventum);
         }
 
-        // GET: Categoria/Edit/5
+        // GET: Venta/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -82,22 +82,22 @@ namespace WebBroasteria.Controllers
                 return NotFound();
             }
 
-            var categorium = await _context.Categoria.FindAsync(id);
-            if (categorium == null)
+            var ventum = await _context.Venta.FindAsync(id);
+            if (ventum == null)
             {
                 return NotFound();
             }
-            return View(categorium);
+            return View(ventum);
         }
 
-        // POST: Categoria/Edit/5
+        // POST: Venta/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Descripcion,UsuarioRegistro,FechaRegistro,Estado")] Categorium categorium)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TipoDocumento,NumeroDocumento,DocumentoCliente,NombreCliente,MontoPago,MontoCambio,MontoTotal,UsuarioRegistro,FechaRegistro,Estado")] Ventum ventum)
         {
-            if (id != categorium.Id)
+            if (id != ventum.Id)
             {
                 return NotFound();
             }
@@ -106,12 +106,12 @@ namespace WebBroasteria.Controllers
             {
                 try
                 {
-                    _context.Update(categorium);
+                    _context.Update(ventum);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoriumExists(categorium.Id))
+                    if (!VentumExists(ventum.Id))
                     {
                         return NotFound();
                     }
@@ -122,10 +122,10 @@ namespace WebBroasteria.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(categorium);
+            return View(ventum);
         }
 
-        // GET: Categoria/Delete/5
+        // GET: Venta/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,34 +133,34 @@ namespace WebBroasteria.Controllers
                 return NotFound();
             }
 
-            var categorium = await _context.Categoria
+            var ventum = await _context.Venta
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (categorium == null)
+            if (ventum == null)
             {
                 return NotFound();
             }
 
-            return View(categorium);
+            return View(ventum);
         }
 
-        // POST: Categoria/Delete/5
+        // POST: Venta/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var categorium = await _context.Categoria.FindAsync(id);
-            if (categorium != null)
+            var ventum = await _context.Venta.FindAsync(id);
+            if (ventum != null)
             {
-                _context.Categoria.Remove(categorium);
+                _context.Venta.Remove(ventum);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoriumExists(int id)
+        private bool VentumExists(int id)
         {
-            return _context.Categoria.Any(e => e.Id == id);
+            return _context.Venta.Any(e => e.Id == id);
         }
     }
 }

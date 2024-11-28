@@ -3,70 +3,119 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebBroasteria</title>
+    <title>@ViewData["Title"] - BROASTERIA HANDA</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebBroasteria.styles.css" asp-append-version="true" />
+    <style>
+        /* Aseguramos que el body ocupe toda la altura disponible */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* El contenido principal ocupa el espacio disponible */
+        .container {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto; /* Empuja el footer hacia abajo */
+        }
+
+            .footer a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    color: #6610f2;
+                }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebBroasteria</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark"  asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark"  asp-controller="Home" asp-action="Privacy">Privacidad</a>
-                        </li>
-                        @if (User.Identity?.IsAuthenticated == true)
-                        {
+    @* Verifica si la acción actual es "Login". Si es, no mostrar el header *@
+    @if (ViewContext.RouteData.Values["action"]?.ToString()?.ToLower() != "login")
+    {
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BROASTERIA HANDA</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Categoria" asp-action="Index">Categoria</a>
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Productos" asp-action="Index">Productos</a>
+                                <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacidad</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Clientes" asp-action="Index">Clientes</a>
-                            </li>
-                        }
-                        @if (User.Identity?.IsAuthenticated == false)
-                        {
-                            <li class="get-started"><a asp-controller="Account" asp-action="Login">Iniciar Sesión</a></li>
-                        }
-                        else
-                        {
-                            <li class="drop-down">
-                                <a href="">Hola @User.Identity?.Name</a>
-                                <ul>
-                                    <li>@await Html.PartialAsync("_LogoutPartial")</li>
-                                </ul>
-                            </li>
-                        }
-                    </ul>
+                            @if (User.Identity?.IsAuthenticated == true)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Categoria" asp-action="Index">Categoría</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Productos" asp-action="Index">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Venta" asp-action="Index">Venta</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="DetalleVenta" asp-action="Index">Detalle Venta</a>
+                                </li>
+                            }
+                            @if (User.Identity?.IsAuthenticated == false)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-outline-light text-dark px-3 py-2 rounded-pill" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hola, @User.Identity?.Name
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <li>@await Html.PartialAsync("_LogoutPartial")</li>
+                                    </ul>
+                                </li>
+                            }
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
+            </nav>
+        </header>
+    }
+    <div class="container my-5">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer">
         <div class="container">
-            &copy; 2024 - WebBroasteria - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <p>BROASTERIA HANDA - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a></p>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

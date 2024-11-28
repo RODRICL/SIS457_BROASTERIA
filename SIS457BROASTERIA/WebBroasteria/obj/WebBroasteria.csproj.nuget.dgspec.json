@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj": {}
+    "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj": {
+    "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj",
         "projectName": "WebBroasteria",
-        "projectPath": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj",
+        "projectPath": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\WebBroasteria.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\Desktop\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\Documents\\UNIVERSIDAD\\4to semestre\\LABORATORIO 457\\SIS457_BROASTERIA\\SIS457BROASTERIA\\WebBroasteria\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
