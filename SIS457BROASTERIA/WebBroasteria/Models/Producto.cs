@@ -19,11 +19,15 @@ public partial class Producto
     [Required(ErrorMessage = "La descripción es obligatoria.")]
     public string Descripcion { get; set; } = null!;
 
-    [Required(ErrorMessage = "El stock de obligatorio.")]
-    public int Stock { get; set; }
+    [Required(ErrorMessage = "El stock es obligatorio.")]
+    [Range(1, int.MaxValue, ErrorMessage = "El stock debe ser mayor que 0.")]
+    public int? Stock { get; set; }  // Cambiado de int a int?
 
     [Required(ErrorMessage = "El precio de venta es obligatorio.")]
+    [Range(1, double.MaxValue, ErrorMessage = "El precio de venta debe ser mayor que 0.")]
     public decimal? PrecioVenta { get; set; }
+
+
 
     public string UsuarioRegistro { get; set; } = null!;
 

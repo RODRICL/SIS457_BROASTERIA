@@ -65,24 +65,35 @@ namespace WebBroasteria.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdCategoria,Codigo,Nombre,Descripcion,Stock,PrecioVenta")] Producto producto)
         {
-            if (!string.IsNullOrEmpty(producto.Codigo) && !string.IsNullOrEmpty(producto.Nombre) && !string.IsNullOrEmpty(producto.Descripcion))
+            // Validación de campos requeridos
+            if (!string.IsNullOrEmpty(producto.Codigo) &&
+            !string.IsNullOrEmpty(producto.Nombre) &&
+            !string.IsNullOrEmpty(producto.Descripcion) &&
+            producto.Stock.HasValue && producto.Stock > 0 &&  // Validación para Stock no nulo y mayor a 0
+            producto.PrecioVenta.HasValue && producto.PrecioVenta > 0)
             {
+                // Asignar valores adicionales
                 producto.UsuarioRegistro = User.Identity.Name;
                 producto.FechaRegistro = DateTime.Now;
                 producto.Estado = 1;
 
+                // Guardar el producto en la base de datos
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            // Si la validación falla, cargar las categorías nuevamente
             ViewBag.IdCategoria = new SelectList(
-                _context.Categoria.Where(c => c.Estado != -1), // categorías con estado -1
-                "Id",          // (Id de la categoría que se almacenará en el modelo)
-                "Descripcion"  // (Descripcion de la categoría)
+                _context.Categoria.Where(c => c.Estado != -1),
+                "Id",
+                "Descripcion"
             );
 
+            // Devolver la vista con el modelo para corregir errores
             return View(producto);
         }
+
 
         // GET: Productos/Edit/5
         public async Task<IActionResult> Edit(int? id)
