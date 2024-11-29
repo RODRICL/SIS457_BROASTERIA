@@ -10,6 +10,10 @@
     <div class="col-md-4">
         <form asp-action="Edit" asp-route-id="@Model.Id">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Campo oculto para el ID -->
+            <input asp-for="Id" type="hidden" />
+
             <div class="form-group">
                 <label class="control-label">Documento</label>
                 <input asp-for="Documento" class="form-control" type="text" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebBroasteria.Models;
@@ -47,33 +50,38 @@ namespace WebBroasteria.Controllers
             return View();
         }
 
-        // POST: Clientes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Documento,NombreCompleto,Email,Telefono")] Cliente cliente)
         {
-            // Validar si el documento ya existe
-            if (_context.Clientes.Any(x => x.Documento == cliente.Documento))
+            if (!string.IsNullOrEmpty(cliente.Documento) && !string.IsNullOrEmpty(cliente.NombreCompleto) &&
+                !string.IsNullOrEmpty(cliente.Email) && !string.IsNullOrEmpty(cliente.Telefono))
             {
-                ModelState.AddModelError("Documento", "El documento ya existe.");
-            }
+                // Verificar si ya existe un cliente con el mismo Documento
+                bool documentoExiste = await _context.Clientes.AnyAsync(c => c.Documento == cliente.Documento);
+                if (documentoExiste)
+                {
+                    ModelState.AddModelError("Documento", "Ya existe un cliente con este documento.");
+                    return View(cliente);
+                }
 
-            // Validar si el nombre completo ya existe
-            if (_context.Clientes.Any(x => x.NombreCompleto == cliente.NombreCompleto))
-            {
-                ModelState.AddModelError("NombreCompleto", "El nombre completo ya existe.");
-            }
+                // Verificar si ya existe un cliente con el mismo NombreCompleto
+                bool nombreExiste = await _context.Clientes.AnyAsync(c => c.NombreCompleto == cliente.NombreCompleto);
+                if (nombreExiste)
+                {
+                    ModelState.AddModelError("NombreCompleto", "Ya existe un cliente con este nombre completo.");
+                    return View(cliente);
+                }
 
-            if (!string.IsNullOrEmpty(cliente.Documento) && !string.IsNullOrEmpty(cliente.NombreCompleto) && !string.IsNullOrEmpty(cliente.Email) && !string.IsNullOrEmpty(cliente.Telefono))
-            {
+                // Si no hay conflictos, proceder a crear el cliente
                 cliente.UsuarioRegistro = User.Identity.Name;
                 cliente.FechaRegistro = DateTime.Now;
                 cliente.Estado = 1;
-
                 _context.Add(cliente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(cliente);
         }
 
@@ -96,17 +104,62 @@ namespace WebBroasteria.Controllers
         // POST: Clientes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Documento,NombreCompleto,Email,Telefono,UsuarioRegistro,FechaRegistro,Estado")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Documento,NombreCompleto,Email,Telefono,Estado")] Cliente cliente)
         {
             if (id != cliente.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            // Validar que el Teléfono no esté vacío
+            if (string.IsNullOrEmpty(cliente.Telefono))
             {
+                ModelState.AddModelError("Telefono", "El campo Teléfono es obligatorio.");
+                return View(cliente);
+            }
+
+            // Validar que el Email no esté vacío
+            if (string.IsNullOrEmpty(cliente.Email))
+            {
+                ModelState.AddModelError("Email", "El campo Email es obligatorio.");
+                return View(cliente);
+            }
+
+            // Validación de Documento
+            if (!string.IsNullOrEmpty(cliente.Documento) && !string.IsNullOrEmpty(cliente.NombreCompleto))
+            {
+                bool documentoExiste = await _context.Clientes
+                    .AnyAsync(c => c.Documento == cliente.Documento && c.Id != cliente.Id);
+
+                if (documentoExiste)
+                {
+                    ModelState.AddModelError("Documento", "Ya existe otro cliente con este documento.");
+                    return View(cliente);
+                }
+
+                // Validación de Nombre Completo
+                bool nombreExiste = await _context.Clientes
+                    .AnyAsync(c => c.NombreCompleto == cliente.NombreCompleto && c.Id != cliente.Id);
+
+                if (nombreExiste)
+                {
+                    ModelState.AddModelError("NombreCompleto", "Ya existe otro cliente con este nombre completo.");
+                    return View(cliente);
+                }
+
                 try
                 {
+                    // Recuperar los valores actuales de UsuarioRegistro y FechaRegistro
+                    var clienteActual = await _context.Clientes.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+                    if (clienteActual == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Mantener los valores originales de UsuarioRegistro y FechaRegistro
+                    cliente.UsuarioRegistro = clienteActual.UsuarioRegistro;
+                    cliente.FechaRegistro = clienteActual.FechaRegistro;
+
                     _context.Update(cliente);
                     await _context.SaveChangesAsync();
                 }
@@ -121,8 +174,10 @@ namespace WebBroasteria.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(cliente);
         }
 

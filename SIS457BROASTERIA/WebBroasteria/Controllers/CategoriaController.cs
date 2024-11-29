@@ -103,8 +103,6 @@ namespace WebBroasteria.Controllers
         }
 
         // POST: Categoria/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Descripcion,UsuarioRegistro,FechaRegistro,Estado")] Categorium categorium)
@@ -118,6 +116,17 @@ namespace WebBroasteria.Controllers
             {
                 try
                 {
+                    // Verificar si ya existe una categoría con la misma descripción, pero no la actual
+                    bool categoryExists = await _context.Categoria
+                        .AnyAsync(c => c.Descripcion == categorium.Descripcion && c.Id != categorium.Id);
+
+                    if (categoryExists)
+                    {
+                        ModelState.AddModelError("", "Ya existe una categoría con esta descripción.");
+                        return View(categorium);
+                    }
+
+                    // Si no existe una categoría con la misma descripción, actualizar los datos
                     _context.Update(categorium);
                     await _context.SaveChangesAsync();
                 }
