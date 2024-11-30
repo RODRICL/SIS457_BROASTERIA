@@ -27,6 +27,17 @@ namespace WebBroasteria.Controllers
             return View(await _context.Clientes.Where(x => x.Estado != -1).ToListAsync());
         }
 
+        // GET: Clientes/Buscar
+        public IActionResult Buscar(string searchTerm)
+        {
+            // Realizar la búsqueda en base al término ingresado
+            var clientes = _context.Clientes
+                .Where(c => (c.NombreCompleto.Contains(searchTerm) || c.Documento.Contains(searchTerm)) && c.Estado != -1)
+                .ToList();
+
+            return View(clientes);  // Retornar la vista con los clientes encontrados
+        }
+
         // GET: Clientes/Details/5
         public async Task<IActionResult> Details(int? id)
         {

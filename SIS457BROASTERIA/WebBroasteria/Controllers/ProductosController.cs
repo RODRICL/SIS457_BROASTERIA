@@ -51,12 +51,17 @@ namespace WebBroasteria.Controllers
         // GET: Productos/Create
         public IActionResult Create()
         {
+            // Obtén los productos activos (aquellos cuyo Estado no es -1)
+            ViewBag.Productos = _context.Productos.Where(p => p.Estado != -1).ToList();
+
+            // Cargar categorías para el dropdown de categorías
             ViewBag.IdCategoria = new SelectList(
-                _context.Categoria.Where(c => c.Estado != -1), // categorías con estado diferente a -1
-                "Id",          // Valor que se almacena en el modelo (Id de la categoría)
-                "Descripcion"  // (Descripción de la categoría)
+                _context.Categoria.Where(c => c.Estado != -1), // Filtra categorías con estado no -1
+                "Id",          // Valor que se almacena (ID de la categoría)
+                "Descripcion"  // Lo que se muestra en el select (Descripción de la categoría)
             );
 
+            // Retorna la vista de creación de productos
             return View();
         }
 
@@ -126,8 +131,8 @@ namespace WebBroasteria.Controllers
             if (!string.IsNullOrEmpty(producto.Codigo) &&
                 !string.IsNullOrEmpty(producto.Nombre) &&
                 !string.IsNullOrEmpty(producto.Descripcion) &&
-                producto.Stock.HasValue && producto.Stock > 0 &&  // Validación para Stock no nulo y mayor a 0
-                producto.PrecioVenta.HasValue && producto.PrecioVenta > 0) // Validación para PrecioVenta no nulo y mayor a 0
+                producto.Stock.HasValue && producto.Stock > 0 &&  
+                producto.PrecioVenta.HasValue && producto.PrecioVenta > 0) 
             {
                 try
                 {

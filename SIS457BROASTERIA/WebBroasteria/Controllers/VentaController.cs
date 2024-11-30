@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using WebBroasteria.Models;
 
@@ -25,9 +23,8 @@ namespace WebBroasteria.Controllers
         public async Task<IActionResult> Index()
         {
             var labBroasteriaContext = _context.Venta
-               .Where(v => v.Estado != -1);
-
-            return View(await _context.Venta.ToListAsync());
+                .Where(v => v.Estado != -1);  // Filtra las ventas activas
+            return View(await labBroasteriaContext.ToListAsync());
         }
 
         // GET: Venta/Details/5
@@ -39,6 +36,7 @@ namespace WebBroasteria.Controllers
             }
 
             var ventum = await _context.Venta
+                .Include(v => v.DetalleVenta) // Incluye detalles de la venta
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (ventum == null)
             {
@@ -51,15 +49,19 @@ namespace WebBroasteria.Controllers
         // GET: Venta/Create
         public IActionResult Create()
         {
+            // Obtener la lista de productos
+            ViewBag.Productos = _context.Productos
+                .Where(p => p.Estado != -1)  // Filtra productos activos
+                .ToList();  // Convierte a lista
+
             return View();
         }
 
+
         // POST: Venta/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TipoDocumento,NumeroDocumento,DocumentoCliente,NombreCliente,MontoPago,MontoCambio,MontoTotal")] Ventum ventum)
+        public async Task<IActionResult> Create([Bind("TipoDocumento,NumeroDocumento,DocumentoCliente,NombreCliente,MontoPago,MontoCambio,MontoTotal")] Ventum ventum, int[] productos, int[] cantidades)
         {
             if (ModelState.IsValid)
             {
@@ -67,10 +69,42 @@ namespace WebBroasteria.Controllers
                 ventum.FechaRegistro = DateTime.Now;
                 ventum.Estado = 1;
 
+                // Agregar la venta a la base de datos
                 _context.Add(ventum);
                 await _context.SaveChangesAsync();
+
+                // Crear los detalles de la venta
+                for (int i = 0; i < productos.Length; i++)
+                {
+                    var producto = _context.Productos.Find(productos[i]);
+                    if (producto == null)
+                    {
+                        ModelState.AddModelError("", "Producto no encontrado.");
+                        return View(ventum);
+                    }
+
+                    var detalle = new DetalleVentum
+                    {
+                        IdVenta = ventum.Id,
+                        IdProducto = productos[i],
+                        Cantidad = cantidades[i],
+                        PrecioVenta = producto.PrecioVenta,
+                        SubTotal = cantidades[i] * (decimal)producto.PrecioVenta,  // Conversión explícita a decimal
+                        UsuarioRegistro = User.Identity.Name,
+                        FechaRegistro = DateTime.Now,
+                        Estado = 1
+                    };
+                    _context.Add(detalle);
+                }
+
+                // Guardar los detalles
+                await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
+
+            // Si algo falla, recargar los productos
+            ViewBag.Productos = _context.Productos.Where(p => p.Estado != -1).ToList();
             return View(ventum);
         }
 
@@ -91,8 +125,6 @@ namespace WebBroasteria.Controllers
         }
 
         // POST: Venta/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,TipoDocumento,NumeroDocumento,DocumentoCliente,NombreCliente,MontoPago,MontoCambio,MontoTotal,UsuarioRegistro,FechaRegistro,Estado")] Ventum ventum)
@@ -106,6 +138,13 @@ namespace WebBroasteria.Controllers
             {
                 try
                 {
+                    // Validar montos
+                    if (ventum.MontoPago <= 0 || ventum.MontoCambio < 0 || ventum.MontoTotal <= 0)
+                    {
+                        ModelState.AddModelError("", "Los montos deben ser mayores que cero.");
+                        return View(ventum);
+                    }
+
                     _context.Update(ventum);
                     await _context.SaveChangesAsync();
                 }
@@ -151,16 +190,17 @@ namespace WebBroasteria.Controllers
             var ventum = await _context.Venta.FindAsync(id);
             if (ventum != null)
             {
-                _context.Venta.Remove(ventum);
+                ventum.Estado = -1;  // Cambiar estado a "eliminado"
+                _context.Update(ventum);
+                await _context.SaveChangesAsync();
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool VentumExists(int id)
         {
-            return _context.Venta.Any(e => e.Id == id);
+            return _context.Venta.Any(e => e.Id == id && e.Estado != -1);
         }
     }
 }

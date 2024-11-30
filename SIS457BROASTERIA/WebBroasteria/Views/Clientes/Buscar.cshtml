@@ -1,0 +1,49 @@
+﻿@model List<WebBroasteria.Models.Cliente>
+
+<h2>Buscar Cliente</h2>
+
+<form method="get" action="@Url.Action("Buscar", "Clientes")">
+    <div class="form-group">
+        <label for="searchTerm">Buscar por Documento o Nombre</label>
+        <input type="text" id="searchTerm" name="searchTerm" class="form-control" placeholder="Ingrese documento o nombre" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+@if (Model.Any())
+{
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Documento</th>
+                <th>Nombre Completo</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Documento</td>
+                    <td>@cliente.NombreCompleto</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" onclick="selectClient('@cliente.Documento', '@cliente.NombreCompleto')">Seleccionar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No se encontraron clientes.</p>
+}
+
+<script>
+    // Función para seleccionar un cliente y rellenar el formulario en la ventana principal
+    function selectClient(documento, nombre) {
+        window.opener.document.getElementById('DocumentoCliente').value = documento;
+        window.opener.document.getElementById('NombreCliente').value = nombre;
+        window.close();  // Cierra la ventana de búsqueda
+    }
+</script>

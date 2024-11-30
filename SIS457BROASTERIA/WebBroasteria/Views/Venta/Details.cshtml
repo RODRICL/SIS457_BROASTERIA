@@ -1,79 +1,47 @@
 ﻿@model WebBroasteria.Models.Ventum
 
 @{
-    ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Detalle de Venta";
 }
 
-<h1>Details</h1>
+<h2>@ViewData["Title"]</h2>
 
 <div>
-    <h4>Ventum</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TipoDocumento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TipoDocumento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NumeroDocumento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NumeroDocumento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DocumentoCliente)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DocumentoCliente)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreCliente)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NombreCliente)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MontoPago)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MontoPago)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MontoCambio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MontoCambio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MontoTotal)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MontoTotal)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UsuarioRegistro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsuarioRegistro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaRegistro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaRegistro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estado)
+    <h4>Venta: @Model.NumeroDocumento</h4>
+    <dl class="dl-horizontal">
+        <dt>Tipo Documento</dt>
+        <dd>@Model.TipoDocumento</dd>
+
+        <dt>Documento Cliente</dt>
+        <dd>@Model.DocumentoCliente</dd>
+
+        <dt>Nombre Cliente</dt>
+        <dd>@Model.NombreCliente</dd>
+
+        <dt>Monto Total</dt>
+        <dd>@Model.MontoTotal</dd>
+
+        <dt>Detalles</dt>
+        <dd>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>SubTotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var detalle in Model.DetalleVenta)
+                    {
+                        <tr>
+                            <td>@detalle.IdProductoNavigation.Nombre</td>  <!-- Accediendo al nombre del producto -->
+                            <td>@detalle.Cantidad</td>
+                            <td>@detalle.SubTotal</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </dd>
     </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
 </div>

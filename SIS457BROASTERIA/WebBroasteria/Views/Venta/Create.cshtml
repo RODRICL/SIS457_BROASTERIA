@@ -1,61 +1,184 @@
 ﻿@model WebBroasteria.Models.Ventum
 
 @{
-    ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Crear Venta";
 }
 
-<h1>Create</h1>
+<h2>@ViewData["Title"]</h2>
 
-<h4>Ventum</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<form asp-action="Create">
+    <!-- Información del cliente -->
+    <div class="card mb-3">
+        <div class="card-header bg-primary text-white">
+            <h4>Información del Cliente</h4>
+        </div>
+        <div class="card-body">
             <div class="form-group">
-                <label asp-for="TipoDocumento" class="control-label"></label>
-                <input asp-for="TipoDocumento" class="form-control" />
-                <span asp-validation-for="TipoDocumento" class="text-danger"></span>
+                <label asp-for="DocumentoCliente" class="control-label">Documento del Cliente</label>
+                <input asp-for="DocumentoCliente" class="form-control" placeholder="Número de documento" />
             </div>
             <div class="form-group">
-                <label asp-for="NumeroDocumento" class="control-label"></label>
-                <input asp-for="NumeroDocumento" class="form-control" />
-                <span asp-validation-for="NumeroDocumento" class="text-danger"></span>
+                <label asp-for="NombreCliente" class="control-label">Nombre del Cliente</label>
+                <input asp-for="NombreCliente" class="form-control" placeholder="Nombre completo del cliente" />
             </div>
-            <div class="form-group">
-                <label asp-for="DocumentoCliente" class="control-label"></label>
-                <input asp-for="DocumentoCliente" class="form-control" />
-                <span asp-validation-for="DocumentoCliente" class="text-danger"></span>
+            <div class="form-group text-center">
+                <button type="button" class="btn btn-info" onclick="window.open('@Url.Action("Buscar", "Clientes")', 'BuscarCliente', 'width=800,height=600');">
+                    Buscar Cliente
+                </button>
             </div>
-            <div class="form-group">
-                <label asp-for="NombreCliente" class="control-label"></label>
-                <input asp-for="NombreCliente" class="form-control" />
-                <span asp-validation-for="NombreCliente" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MontoPago" class="control-label"></label>
-                <input asp-for="MontoPago" class="form-control" />
-                <span asp-validation-for="MontoPago" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MontoCambio" class="control-label"></label>
-                <input asp-for="MontoCambio" class="form-control" />
-                <span asp-validation-for="MontoCambio" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MontoTotal" class="control-label"></label>
-                <input asp-for="MontoTotal" class="form-control" />
-                <span asp-validation-for="MontoTotal" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <!-- Sección para mostrar la fecha y hora -->
+    <div class="card mb-3">
+        <div class="card-header bg-dark text-white">
+            <h4>Fecha y Hora Actual</h4>
+        </div>
+        <div class="card-body text-center">
+            <p id="fecha-hora" class="h5"></p>
+        </div>
+    </div>
 
+    <!-- Selección de productos y cantidades -->
+    <div class="card mb-3">
+        <div class="card-header bg-info text-white">
+            <h4>Productos</h4>
+        </div>
+        <div class="card-body" id="producto-container">
+            <div class="product-row">
+                <div class="form-group">
+                    <label>Producto</label>
+                    <select name="productos[]" class="form-control product-select">
+                        <option value="">Seleccione un Producto</option>
+                        @if (ViewBag.Productos != null && ViewBag.Productos.Count > 0)
+                        {
+                            @foreach (var producto in ViewBag.Productos as List<WebBroasteria.Models.Producto>)
+                            {
+                                <option value="@producto.Id" data-precio="@producto.PrecioVenta">
+                                    @producto.Nombre
+                                </option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="">No hay productos disponibles</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input type="number" name="cantidades[]" class="form-control cantidad-input" placeholder="Cantidad del producto" min="1" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para agregar más productos -->
+    <div class="form-group text-center">
+        <button type="button" id="add-product" class="btn btn-secondary">Agregar Producto</button>
+    </div>
+
+    <!-- Detalles de la venta -->
+    <div class="card mb-3">
+        <div class="card-header bg-success text-white">
+            <h4>Detalles de la Venta</h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label asp-for="MontoTotal" class="control-label">Monto Total</label>
+                <input asp-for="MontoTotal" id="monto-total" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="MontoPago" class="control-label">Monto Pago</label>
+                <input asp-for="MontoPago" id="monto-pago" class="form-control" placeholder="Monto entregado por el cliente" />
+            </div>
+            <div class="form-group">
+                <label asp-for="MontoCambio" class="control-label">Monto Cambio</label>
+                <input asp-for="MontoCambio" id="monto-cambio" class="form-control" readonly />
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para crear la venta -->
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary btn-lg">Crear Venta</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        // Función para calcular el monto total
+        function calcularMontoTotal() {
+            let total = 0;
+            document.querySelectorAll('.product-row').forEach(row => {
+                const select = row.querySelector('.product-select');
+                const cantidadInput = row.querySelector('.cantidad-input');
+                const precio = parseFloat(select.options[select.selectedIndex]?.dataset.precio || 0);
+                const cantidad = parseFloat(cantidadInput.value || 0);
+                total += precio * cantidad;
+            });
+            document.getElementById('monto-total').value = total.toFixed(2);
+            calcularMontoCambio(); // Actualizar el cambio automáticamente
+        }
+
+        // Función para calcular el monto de cambio
+        function calcularMontoCambio() {
+            const montoTotal = parseFloat(document.getElementById('monto-total').value || 0);
+            const montoPago = parseFloat(document.getElementById('monto-pago').value || 0);
+            const montoCambio = montoPago - montoTotal;
+            document.getElementById('monto-cambio').value = montoCambio >= 0 ? montoCambio.toFixed(2) : 0;
+        }
+
+        // Función para actualizar la fecha y hora
+        function actualizarFechaHora() {
+            const fechaHoraElemento = document.getElementById('fecha-hora');
+            const ahora = new Date();
+            const opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            fechaHoraElemento.textContent = ahora.toLocaleDateString('es-ES', opciones);
+        }
+
+        // Actualizar fecha y hora al cargar la página
+        actualizarFechaHora();
+
+        // Opcional: actualizar cada minuto
+        setInterval(actualizarFechaHora, 60000);
+
+        // Event listener para cambios en los productos o cantidades
+        document.getElementById('producto-container').addEventListener('change', function (e) {
+            if (e.target.classList.contains('product-select') || e.target.classList.contains('cantidad-input')) {
+                calcularMontoTotal();
+            }
+        });
+
+        // Event listener para cambios en el monto de pago
+        document.getElementById('monto-pago').addEventListener('input', function () {
+            calcularMontoCambio();
+        });
+
+        // Agregar nueva fila de producto
+        document.getElementById('add-product').addEventListener('click', function () {
+            const container = document.getElementById('producto-container');
+            const newProductHtml = `
+                                        <div class="product-row">
+                                            <div class="form-group">
+                                                <label>Producto</label>
+                                                <select name="productos[]" class="form-control product-select">
+                                                    <option value="">Seleccione un Producto</option>
+        @foreach (var producto in ViewBag.Productos as List<WebBroasteria.Models.Producto>)
+        {
+                                                                    <option value="@producto.Id" data-precio="@producto.PrecioVenta">
+                @producto.Nombre
+                                                                    </option>
+        }
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Cantidad</label>
+                                                <input type="number" name="cantidades[]" class="form-control cantidad-input" placeholder="Cantidad del producto" min="1" />
+                                            </div>
+                                        </div>
+                                    `;
+            container.insertAdjacentHTML('beforeend', newProductHtml);
+        });
+    </script>
+}
