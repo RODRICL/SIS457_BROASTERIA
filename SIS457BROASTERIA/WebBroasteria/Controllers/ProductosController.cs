@@ -93,8 +93,6 @@ namespace WebBroasteria.Controllers
             // Devolver la vista con el modelo para corregir errores
             return View(producto);
         }
-
-
         // GET: Productos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -124,13 +122,18 @@ namespace WebBroasteria.Controllers
                 return NotFound();
             }
 
-            // Comprobar si el modelo es válido antes de proceder
-            if (!string.IsNullOrEmpty(producto.Codigo) && !string.IsNullOrEmpty(producto.Nombre) && !string.IsNullOrEmpty(producto.Descripcion))
+            // Validación de campos requeridos
+            if (!string.IsNullOrEmpty(producto.Codigo) &&
+                !string.IsNullOrEmpty(producto.Nombre) &&
+                !string.IsNullOrEmpty(producto.Descripcion) &&
+                producto.Stock.HasValue && producto.Stock > 0 &&  // Validación para Stock no nulo y mayor a 0
+                producto.PrecioVenta.HasValue && producto.PrecioVenta > 0) // Validación para PrecioVenta no nulo y mayor a 0
             {
                 try
                 {
                     _context.Update(producto);  // Actualiza el producto
                     await _context.SaveChangesAsync();  // Guarda los cambios en la base de datos
+
                     return RedirectToAction(nameof(Index));  // Redirige al Index con los datos actualizados
                 }
                 catch (DbUpdateConcurrencyException)
@@ -146,9 +149,16 @@ namespace WebBroasteria.Controllers
                 }
             }
 
-            // Si hay un error de validación, se vuelve a cargar la vista de edición
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria.Where(c => c.Estado != -1), "Id", "Descripcion", producto.IdCategoria);
-            return View(producto);  // Retorna a la vista Edit con los datos que no pasaron la validación
+            // Si la validación falla, cargar las categorías nuevamente
+            ViewData["IdCategoria"] = new SelectList(
+                _context.Categoria.Where(c => c.Estado != -1),
+                "Id",
+                "Descripcion",
+                producto.IdCategoria
+            );
+
+            // Devolver la vista con el modelo para corregir errores
+            return View(producto);
         }
 
         // GET: Productos/Delete/5
