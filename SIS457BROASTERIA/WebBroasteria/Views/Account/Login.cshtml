@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
-      <!-- Asegúrate de que el layout esté asignado correctamente -->
 }
 
 <style>
@@ -11,56 +10,65 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* Centrado horizontal y vertical */
-        min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+        align-items: center;
+        min-height: 100vh;
         margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f6f9;
     }
 
     .login-container {
         background-color: #ffffff;
         padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         max-width: 400px;
         width: 100%;
+        transition: transform 0.3s ease-in-out;
     }
+
+        .login-container:hover {
+            transform: translateY(-10px); /* Efecto hover */
+        }
 
     .login-header {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
         .login-header h2 {
-            margin-bottom: 10px;
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 15px;
         }
 
     input[type="text"], input[type="password"] {
         width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
         font-size: 16px;
         transition: all 0.3s ease;
+        background-color: #f9f9f9;
     }
 
         input[type="text"]:focus, input[type="password"]:focus {
             outline: none;
             border-color: #007bff;
-            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
         }
 
     button[type="submit"] {
         width: 100%;
-        padding: 12px;
+        padding: 15px;
         background-color: #007bff;
         color: white;
         border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        border-radius: 8px;
         font-size: 16px;
+        cursor: pointer;
         transition: all 0.3s ease;
     }
 
@@ -70,13 +78,26 @@
 
     label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
     }
 
     .forgot-password {
         text-align: right;
-        margin-top: 10px;
+        margin-top: 15px;
     }
+
+        .forgot-password a {
+            color: #007bff;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+            .forgot-password a:hover {
+                color: #0056b2;
+                text-decoration: underline;
+            }
 
     /* Estilos del footer */
     footer {
@@ -87,7 +108,7 @@
         background-color: #343a40;
         color: white;
         text-align: center;
-        padding: 10px 0;
+        padding: 12px 0;
         font-size: 14px;
     }
 
@@ -99,6 +120,12 @@
             footer a:hover {
                 color: #0056b2;
             }
+
+    /* Estilo para checkbox */
+    .form-check-input:checked {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
 </style>
 
 <div class="login-container">
@@ -110,26 +137,25 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
             <label asp-for="usuario" class="control-label"></label>
-            <input asp-for="usuario" class="form-control" placeholder="Username" required />
+            <input asp-for="usuario" class="form-control" placeholder="Usuario" required />
             <span asp-validation-for="usuario" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label asp-for="clave" class="control-label"></label>
-            <input asp-for="clave" type="password" class="form-control" placeholder="Password" required />
+            <input asp-for="clave" type="password" class="form-control" placeholder="Contraseña" required />
             <span asp-validation-for="clave" class="text-danger"></span>
         </div>
         <div class="form-group form-check mb-3">
             <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme" />
-            <label class="form-check-label" for="recordarme">Recordar contraseña</label>
+            <label class="form-check-label" for="recordarme">Recordarme</label>
         </div>
         <button type="submit" class="btn btn-primary">ACCEDER</button>
         <div class="forgot-password mt-3">
-            <a asp-controller="Account" asp-action="ResetPassword">¿Has olvidado tu contraseña?</a>
+            <a asp-controller="Account" asp-action="ResetPassword">¿Olvidaste tu contraseña?</a>
         </div>
     </form>
 </div>
 
-
 <footer>
-    BROASTERIA HANDA - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+    BROASTERIA HANDA - <a asp-area="" asp-controller="Home" asp-action="Privacy">Política de privacidad</a>
 </footer>
